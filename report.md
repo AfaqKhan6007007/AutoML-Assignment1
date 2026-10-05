@@ -29,28 +29,38 @@ Also consider metrics which are more robust to class imbalances that are present
 ##### Search space 
 
 - define each hyperparameter: range, scale, and constraints
-- common max tree count
+- class_weight: it might be worth setting this prior to search, as it is generally known to be good to use class weights and the value-add of searching for this is minimal (esp. in random search). Otherwise, only between {“balanced”, “balanced_subsample”}.
+
 
 ##### Compute metric
 - running time
-- number of trees trained (unless we determine a fixed budget)
+- number of trees trained (unless we determine a fixed budget), to make it standard across all methods, number of trees divided by the max size of a full-sized tree. Final refit on val+train is not included as a cost. 
 
 ##### Optimizer settings
+**common max tree count **
+
 - Random Search
 
 - SMBO
 
 - Hyperband
+Are trees reused (warmstart), this should be taken into account in number of trees trained. 
 
 ##### Seeds 
 - 5 or 10 random seeds
 the dataset strata  (train +val) can vary as well
+
+give each method the same number of validation evaluation (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
 
 ##### Tabular foundation model
 - in-context learning
 - TabPFN3.5 (latest)
 
 ##### Logging
+- all evaluations
+- configurations
+- 
+
 
 ##### Reproducibility
 
