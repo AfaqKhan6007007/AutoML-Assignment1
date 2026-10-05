@@ -29,8 +29,9 @@ Also consider metrics which are more robust to class imbalances that are present
 ##### Search space 
 
 - define each hyperparameter: range, scale, and constraints
-- class_weight: it might be worth setting this prior to search, as it is generally known to be good to use class weights and the value-add of searching for this is minimal (esp. in random search). Otherwise, only between {“balanced”, “balanced_subsample”}.
-
+- class_weight: it might be worth setting this prior to search, as it is generally known to be good to use class weights and the value-add of searching for this is minimal (esp. in random search). Otherwise, only between {"None", “balanced”, “balanced_subsample”}.
+- min_samples_split: int, in {0, ..., 10} number of samps required to split an internal node
+- min_samples_leaf: int in {1, ?}
 
 ##### Compute metric
 - running time
@@ -38,6 +39,9 @@ Also consider metrics which are more robust to class imbalances that are present
 
 ##### Optimizer settings
 **common max tree count **
+
+- Untuned
+Should it have class_weights, should search space include None if baseline includes none (yes)
 
 - Random Search
 
@@ -50,16 +54,16 @@ Are trees reused (warmstart), this should be taken into account in number of tre
 - 5 or 10 random seeds
 the dataset strata  (train +val) can vary as well
 
-give each method the same number of validation evaluation (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
+give each method the same number of validation evaluations (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
 
 ##### Tabular foundation model
 - in-context learning
 - TabPFN3.5 (latest)
 
 ##### Logging
-- all evaluations
-- configurations
-- 
+- all evaluations: validation and train metrics. This shows the optimizer process across all optimizers. Also the final model performance which is used for the refitting experiment. 
+- configurations (search space vector for a given evaluated tree, for hyperband this should also be logged for intermediate trees)
+
 
 
 ##### Reproducibility
