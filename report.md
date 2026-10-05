@@ -40,6 +40,23 @@ Also consider metrics which are more robust to class imbalances that are present
 
 - SMBO
 
+- Hyperband
+
+##### Seeds 
+- 5 or 10 random seeds
+the dataset strata  (train +val) can vary as well
+
+##### Tabular foundation model
+- in-context learning
+- TabPFN3.5 (latest)
+
+##### Logging
+
+##### Reproducibility
+
+##### 
+
+
 
 
 
