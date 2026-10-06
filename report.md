@@ -26,6 +26,10 @@ metrics. Find a metric which is consistent across the datasets.
 
 Also consider metrics which are more robust to class imbalances that are present in the data. Report the effect of class imbalance on perceived performance.
 
+- metric: balanced accuracy, can be used to evaluate on validation set. For imbalanced datasets it is a useful metric. Otherwise ROC-AUC or F1.
+
+
+
 ##### Search space 
 
 - define each hyperparameter: range, scale, and constraints
@@ -35,7 +39,8 @@ Also consider metrics which are more robust to class imbalances that are present
 
 ##### Compute metric
 - running time
-- number of trees trained (unless we determine a fixed budget), to make it standard across all methods, number of trees divided by the max size of a full-sized tree. Final refit on val+train is not included as a cost. 
+- number of trees trained (unless we determine a fixed budget), to make it standard across all methods, number of trees divided by the max size of a full-sized tree. Final refit on val+train is not included as a cost.
+  
 
 ##### Optimizer settings
 **common max tree count **
