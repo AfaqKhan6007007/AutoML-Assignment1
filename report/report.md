@@ -1,8 +1,8 @@
 # Report 
 
 ## TODO
-1. data exploration
-2. metric selection: consider datasets, whether large or small values for metrics are desired
+1. ~~data exploration~~ 
+2. ~~metric selection: consider datasets, whether large or small values for metrics are desired~~
 3. search space definition: find all relevant hyperparameters. Determine ranges, whether to perform transformations
 4. formalize compute metric: number of full sized forests trained (use the number of trees and max tree size of a given forest)
 5. Make explicit all relevant optimizer settings and justify: for Random, what probability distribution, for SMBO, what surrogate model, acquisition function, etc., for Hyperband what hyperparameters.
@@ -22,13 +22,9 @@ performance and computational effort?
 
 ##### Data protocol
 
-- data split
-stratified holdout (keeps the data proportions across the strata) 
-define train + val/ test split, during random seeds the train+val splits can be changed,
-however, the test split remains untouched across all optimizer runs and seeds to avoid test
-data leakage.
+1. Stratified holdout for all datasets (as it maintains class proportions) with the exception of electricity. This is a time series dataset, so random shuffling would cause leakage of future data in training. No shuffling, but the same split is kept for this dataset. 
 
-- preprocessing and final refitting
+2. preprocessing and final refitting
 Some of the datasets will require some preprocessing (e.g. one hot encoding, empty entries)
 During final refitting/ training of the optimized models, train on the entire train+val combined data
 then test on the held out test set
@@ -36,17 +32,22 @@ then test on the held out test set
   
 ##### Metric and objective function
 
-- fair comparison
-For fair comparison it is important to consider that multiclass and binary classification problems have different
-metrics. Find a metric which is consistent across the datasets.
-
-Also consider metrics which are more robust to class imbalances that are present in the data. Report the effect of class imbalance on perceived performance.
-
-- metric: balanced accuracy, can be used to evaluate on validation set. For imbalanced datasets it is a useful metric. Otherwise ROC-AUC or F1.
-
+1. balanced accuracy will be used as metric and objective function for the optimizers. It is robust the class imbalances which all of our datasets are, with the exception of the electicity dataset. It takes the average recall on all classes, all evenly weighted.
+It is consistent across all datasets.
 
 
 ##### Search space 
+
+- criterion: {“gini”, “entropy”, “log_loss”},
+- max_depth: [1, 'inf'), # define some max depth
+- min_samples_split: [2, n_samples], # minimum samples in a node before split. can do log(min_samples_split) instead
+- minn_samples_leaf: [1, n_samples//2], # minimum samples in child node(s) after split
+- min_weight_fraction_leaf : [0.0, 1]
+- max_features
+- class_weight: {"None", "balanced", "balanced_subsample"}
+
+
+
 do we use parameter transformations like in (hutter2011sequential)? Useful for large min and max of a hyperparam range. 
 - define each hyperparameter: range, scale, and constraints
 - class_weight: it might be worth setting this prior to search, as it is generally known to be good to use class weights and the value-add of searching for this is minimal (esp. in random search). Otherwise, only between {"None", “balanced”, “balanced_subsample”}.
