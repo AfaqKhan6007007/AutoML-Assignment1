@@ -38,15 +38,23 @@ It is consistent across all datasets.
 
 ##### Search space 
 
+**n_trees**
+
 - criterion: {“gini”, “entropy”, “log_loss”},
 - max_depth: [1, 'inf'), # define some max depth
-- min_samples_split: [2, n_samples], # minimum samples in a node before split. can do log(min_samples_split) instead
+- min_samples_split: [2, n_samples], # minimum samples in a node before split. can do log(min_samples_split) . Can also be a float. [0, 0.1]
 - minn_samples_leaf: [1, n_samples//2], # minimum samples in child node(s) after split
-- min_weight_fraction_leaf : [0.0, 1]
-- max_features
+- min_weight_fraction_leaf : [0.0, 0.5]
+- max_features: [1, n_features]
 - class_weight: {"None", "balanced", "balanced_subsample"}
-
-
+- max_leaf_nodes: [1,2^max_depth)
+- min_impurity_decrease: 0,
+- bootstrap: True, 
+- oob_score: False,
+- n_jobs: None, 
+- warm_start: False,
+- verbose = 0,
+- monotonic_cst = None
 
 do we use parameter transformations like in (hutter2011sequential)? Useful for large min and max of a hyperparam range. 
 - define each hyperparameter: range, scale, and constraints

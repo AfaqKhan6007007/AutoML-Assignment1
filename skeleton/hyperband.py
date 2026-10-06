@@ -10,6 +10,9 @@ from typing import Any
 
 from random_forest import Config, Evaluator
 
+from optuna.pruners import HyperbandPruner
+import optuna
+
 
 def optimise_hyperband(
     evaluator: Evaluator,
@@ -25,10 +28,14 @@ def optimise_hyperband(
     At each stage, keep the better configurations and give them more trees,
     keeping other settings fixed. Use reduction_factor for the decrease in
     configuration count and increase in trees.
+
     Compare validation objectives consistently: respect whether higher or lower
     values are better. Explain your schedule, refitting or warm starts, and
     how validation results determine the final selection.
     Return the selected configuration and results needed for your analysis.
     """
+
+
+
 
     raise NotImplementedError
