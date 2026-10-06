@@ -1,6 +1,22 @@
 # Report 
 
+## TODO
+1. data exploration
+2. metric selection: consider datasets, whether large or small values for metrics are desired
+3. search space definition: find all relevant hyperparameters. Determine ranges, whether to perform transformations
+4. formalize compute metric: number of full sized forests trained (use the number of trees and max tree size of a given forest)
+5. Make explicit all relevant optimizer settings and justify: for Random, what probability distribution, for SMBO, what surrogate model, acquisition function, etc., for Hyperband what hyperparameters.
+6. Double check what will need to be logged to answer our 3 research questions
+7. Formalize tab fm experiment
+
 ### Introduction
+
+##### Research questions
+1. How do the optimisers compare with the untuned forest across the five datasets?
+2. How efficiently do they find good configurations?
+3. How does the foundation-model approach compare with all forest methods in predictive
+performance and computational effort?
+
 
 ### Methods
 
@@ -31,7 +47,7 @@ Also consider metrics which are more robust to class imbalances that are present
 
 
 ##### Search space 
-
+do we use parameter transformations like in (hutter2011sequential)? Useful for large min and max of a hyperparam range. 
 - define each hyperparameter: range, scale, and constraints
 - class_weight: it might be worth setting this prior to search, as it is generally known to be good to use class weights and the value-add of searching for this is minimal (esp. in random search). Otherwise, only between {"None", “balanced”, “balanced_subsample”}.
 - min_samples_split: int, in {0, ..., 10} number of samps required to split an internal node
@@ -46,17 +62,19 @@ Also consider metrics which are more robust to class imbalances that are present
 **common max tree count **
 
 - Untuned
-Should it have class_weights, should search space include None if baseline includes none (yes)
+Default settings. 
 
 - Random Search
+Monte-carlo sampling 
 
 - SMBO
+BoTorch. Surrogate model: GP. 
 
 - Hyperband
 Are trees reused (warmstart), this should be taken into account in number of trees trained. 
 
 ##### Seeds 
-- 5 or 10 random seeds
+- 5 random seeds
 the dataset strata  (train +val) can vary as well
 
 give each method the same number of validation evaluations (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
@@ -84,3 +102,12 @@ give each method the same number of validation evaluations (number of trees trai
 ### Conclusion
 
 ### References
+
+@inproceedings{hutter2011sequential,
+  title={Sequential model-based optimization for general algorithm configuration},
+  author={Hutter, Frank and Hoos, Holger H and Leyton-Brown, Kevin},
+  booktitle={International conference on learning and intelligent optimization},
+  pages={507--523},
+  year={2011},
+  organization={Springer}
+}
