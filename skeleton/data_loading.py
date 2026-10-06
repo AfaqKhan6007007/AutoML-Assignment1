@@ -14,7 +14,7 @@ import openml
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, TimeSeriesSplit
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
 
@@ -64,6 +64,7 @@ def load_and_split(
     cache_dir: str | Path = "data_cache",
     max_samples: int | None = None,
     seed: int = 17,
+    temporal: bool = False
 ) -> DataSplits:
     """Create an example stratified 60/20/20 split; cap rows only for small checks."""
 
@@ -72,16 +73,30 @@ def load_and_split(
         X, _, y, _ = train_test_split(
             X, y, train_size=max_samples, stratify=y, random_state=seed
         )
-    X_train_valid, X_test, y_train_valid, y_test = train_test_split(
-        X, y, test_size=0.20, random_state=seed, stratify=y
-    )
-    X_train, X_valid, y_train, y_valid = train_test_split(
-        X_train_valid,
-        y_train_valid,
-        test_size=0.25,
-        random_state=seed,
-        stratify=y_train_valid,
-    )
+
+    if not temporal:
+        X_train_valid, X_test, y_train_valid, y_test = train_test_split(
+            X, y, test_size=0.20, random_state=seed, stratify=y
+        )
+        X_train, X_valid, y_train, y_valid = train_test_split(
+            X_train_valid,
+            y_train_valid,
+            test_size=0.25,
+            random_state=seed,
+            stratify=y_train_valid,
+        )
+    else:
+        X_train_valid, X_test, y_train_valid, y_test = train_test_split(
+            X, y, test_size=0.20, random_state=seed, stratify=y, shuffle=False
+        )
+        X_train, X_valid, y_train, y_valid = train_test_split(
+            X_train_valid,
+            y_train_valid,
+            test_size=0.25,
+            random_state=seed,
+            stratify=y_train_valid,
+            shuffle=False
+        )
     return DataSplits(
         X_train=X_train.reset_index(drop=True),
         X_valid=X_valid.reset_index(drop=True),
