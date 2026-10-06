@@ -59,6 +59,8 @@ do we use parameter transformations like in (hutter2011sequential)? Useful for l
   
 
 ##### Optimizer settings
+
+give each method the same number of validation evaluations (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
 **common max tree count **
 
 - Untuned
@@ -75,9 +77,7 @@ Are trees reused (warmstart), this should be taken into account in number of tre
 
 ##### Seeds 
 - 5 random seeds
-the dataset strata  (train +val) can vary as well
-
-give each method the same number of validation evaluations (number of trees trained). Compute the number for hyperband, then give the same budget to SMBO and Random Search
+- they control the forest algorithm randomness, the data stratification randomness, and the optimizer randomness
 
 ##### Tabular foundation model
 - in-context learning
