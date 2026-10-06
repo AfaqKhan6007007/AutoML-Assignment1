@@ -21,6 +21,9 @@ from tabular_foundation import run_foundation_model
 # Update this if the provided largest dataset is replaced.
 FOUNDATION_DATASET = "covertype"
 
+# Time series dataset
+TIMESERIES_DS = "electricity"
+
 # n_trials is the example evaluation budget for each of Random Search and SMBO.
 # Choose budgets and a Hyperband schedule that support your justified comparison.
 PROFILES: dict[str, dict[str, Any]] = {
@@ -72,7 +75,10 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
         raise ValueError(f"Foundation-only runs require --dataset {FOUNDATION_DATASET}")
 
     profile = PROFILES[args.profile]
-    splits = load_and_split(name, args.cache_dir, profile["max_samples"], args.split_seed)
+    temporal = False
+    if name == TIMESERIES_DS:
+        temporal = True
+    splits = load_and_split(name, args.cache_dir, profile["max_samples"], args.split_seed, temporal=temporal)
     results = []
     forest_methods = {"default", "random", "smbo", "hyperband"}.intersection(args.methods)
     if forest_methods:
