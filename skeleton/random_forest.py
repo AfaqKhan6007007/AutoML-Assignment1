@@ -32,7 +32,7 @@ SEARCH_SPACE = {
     "class_weight": (None, "balanced", "balanced_subsample"),
 }
 
-# Chosen metrif + obj f
+# Chosen metric
 METRIC = "balanced_accuracy"
 AUX_METRIC = "f1_score"
 

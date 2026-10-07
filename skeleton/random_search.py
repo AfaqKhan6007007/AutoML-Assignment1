@@ -8,7 +8,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from random_forest import Config, Evaluator
+from random_forest import Config, Evaluator, sample_configuration
+
+import numpy as np
 
 
 def optimise_random_search(
@@ -24,5 +26,17 @@ def optimise_random_search(
     whether higher or lower values are better.
     Return the selected configuration and results needed for your analysis.
     """
+    rng = np.random.default_rng(seed=seed)
+    best_current_score = None
+    beste_current_config = None
+    history = [] 
+    for _ in range(n_trials):
+        configuration = sample_configuration(rng)
+        result = evaluator(configuration, n_trees, seed)
+        if result["objective"] > best_current_score:
+            best_current_score = result["objective"]
+            beste_current_config = configuration
+        history.append(result)
+    return Config(**beste_current_config), history
 
-    raise NotImplementedError
+

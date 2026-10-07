@@ -8,12 +8,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from random_forest import Config, Evaluator, sample_configuration, SEARCH_SPACE
+from random_forest import Config, Evaluator, SEARCH_SPACE
 
 import optuna
-
-import numpy as np
-
 
 def optimise_smbo(
     evaluator: Evaluator,
@@ -23,6 +20,8 @@ def optimise_smbo(
 ) -> tuple[Config, Any]:
     """TODO: use SMBO to choose configurations based on previous evaluations.
 
+    Current implementation always maximizes. 
+
     Use the shared search space and train each forest with n_trees trees.
     Use up to n_trials evaluations, including any initial evaluations.
     Select the best configuration using the validation objective, respecting
@@ -31,8 +30,7 @@ def optimise_smbo(
     """
 
     history = []
-    rng = np.random.default_rng(seed)
-    def objective(trial, rng=rng):
+    def objective(trial):
         config = {hp: trial.suggest_categorical(hp, choices) for hp, choices in SEARCH_SPACE.items()}
     
         result = evaluator(config, n_trees, seed)
