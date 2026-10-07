@@ -9,6 +9,8 @@ from typing import Any
 
 from data_loading import DataSplits, prepare_final_data
 
+from sklearn.model_selection import train_test_split
+
 from tabpfn import TabPFNClassifier
 
 def run_foundation_model(splits: DataSplits, seed: int) -> Any:
