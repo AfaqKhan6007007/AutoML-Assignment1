@@ -7,9 +7,13 @@ from __future__ import annotations
 
 from typing import Any
 
+from time import perf_counter
+
 from data_loading import DataSplits, prepare_final_data
 
 from sklearn.model_selection import train_test_split
+
+from random_forest import predictive_metrics
 
 from tabpfn import TabPFNClassifier
 
@@ -22,6 +26,7 @@ def run_foundation_model(splits: DataSplits, seed: int) -> Any:
     Retain results for comparing performance and compute with the baseline
     and each tuned forest. See Section 3.5 of the assignment.
     """
+    start = perf_counter()
     X_fit, y_train_valid, X_test, y_test = prepare_final_data(splits)
     X_context, _, y_context, _ = train_test_split(
     X_fit,
@@ -33,6 +38,8 @@ def run_foundation_model(splits: DataSplits, seed: int) -> Any:
     clf = TabPFNClassifier()
     
     clf.fit(X_context, y_context)
-    predictions = clf.predict(X_test)
-
-
+    return {
+            "metrics": predictive_metrics(clf, X_test, y_test),
+            "elapsed_sec": float(perf_counter() - start),
+            }
+    

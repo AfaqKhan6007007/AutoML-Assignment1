@@ -84,9 +84,6 @@ def predictive_metrics(
     return {METRIC: balanced_accuracy_score(y,y_pred),
             AUX_METRIC: f1_score(y, y_pred, average='macro')}
     
-    raise NotImplementedError("Implement predictive_metrics in random_forest.py")
-
-
 def validation_objective(metrics: dict[str, float]) -> float:
     """TODO: return the scalar objective used to compare configurations.
 
@@ -95,9 +92,6 @@ def validation_objective(metrics: dict[str, float]) -> float:
     """
 
     return metrics[METRIC]
-
-    raise NotImplementedError("Implement validation_objective in random_forest.py")
-
 
 def make_evaluator(
     X_train: np.ndarray,
