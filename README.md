@@ -1,10 +1,13 @@
 # AutoML
 
-## TODO:
+## To-do:
 1. run experiments for all seeds, with bash command (see below).
 2. write plotting functions for relevant results (e.g. SMBO, Random search, balanced accuracy curves plotted against n_trials. For hyperband plot all evaluations as accuracy against resource: only promoted forests continue. For all consider using mean/std across runs.)
 3. reconsider number of seeds vs number of trials, might yield more interesting curves. Do a trial SMBO / Random search run first to decide.
 4. summarize findings in report
+5. add refs in report
+6. write introduction
+7. keep report as concise as possible (use tables where possible to avoid excessive explanations)
 
 ## Instructions
 1. in root folder
