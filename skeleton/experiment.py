@@ -79,6 +79,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=17)
     parser.add_argument("--split-seed", type=int, default=2026)
     parser.add_argument("--cache-dir", type=Path, default=Path("data_cache"))
+    parser.add_argument("--context", type=int, default=100)
     return parser.parse_args()
 
 
@@ -141,7 +142,7 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
             })
 
     if "foundation" in args.methods and name == FOUNDATION_DATASET:
-        result = run_foundation_model(splits, seed=args.seed)
+        result = run_foundation_model(splits, seed=args.seed, context_size=args.context)
         print(f"{name} / foundation / seed {args.seed}: {result}", flush=True)
         results.append({
             "dataset": name,

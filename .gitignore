@@ -1,2 +1,3 @@
 data_cache/
 skeleton/__pycache__/
+.env

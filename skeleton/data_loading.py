@@ -93,8 +93,6 @@ def load_and_split(
             X_train_valid,
             y_train_valid,
             test_size=0.25,
-            random_state=seed,
-            stratify=y_train_valid,
             shuffle=False
         )
     return DataSplits(

@@ -15,9 +15,14 @@ from sklearn.model_selection import train_test_split
 
 from random_forest import predictive_metrics
 
-from tabpfn import TabPFNClassifier
+# from tabpfn import TabPFNClassifier
+from tabpfn_client import TabPFNClassifier
 
-def run_foundation_model(splits: DataSplits, seed: int) -> Any:
+from dotenv import load_dotenv
+load_dotenv()
+
+
+def run_foundation_model(splits: DataSplits, seed: int, context_size: int=1000) -> Any:
     """TODO: evaluate a pre-trained tabular foundation model.
 
     Choose and justify the model, how you use it, and the data available to it.
@@ -26,12 +31,14 @@ def run_foundation_model(splits: DataSplits, seed: int) -> Any:
     Retain results for comparing performance and compute with the baseline
     and each tuned forest. See Section 3.5 of the assignment.
     """
+    print(splits.X_train.shape)
     start = perf_counter()
     X_fit, y_train_valid, X_test, y_test = prepare_final_data(splits)
+    print(X_fit.shape)
     X_context, _, y_context, _ = train_test_split(
     X_fit,
     y_train_valid,
-    train_size=1000,
+    train_size=context_size,
     stratify=y_train_valid,
     random_state=seed,  
     )
