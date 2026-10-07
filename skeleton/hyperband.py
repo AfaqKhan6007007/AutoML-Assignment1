@@ -10,10 +10,6 @@ from typing import Any
 
 from random_forest import Config, Evaluator, sample_configuration
 
-from optuna.pruners import HyperbandPruner
-from optuna.integration import OptunaSearchCV
-
-from sklearn.model_selection import HalvingRandomSearchCV, TimeSeriesSplit
 import numpy as np
 
 
@@ -25,6 +21,8 @@ def optimise_hyperband(
     reduction_factor: int = 3,
 ) -> tuple[Config, Any]:
     """TODO: implement or configure multiple successive-halving brackets.
+
+    IMPORTANT: this function currently only maximizes
 
     Use the shared search space. Start brackets with different numbers of
     configurations and trees per forest, between min_trees and max_trees.
@@ -40,29 +38,34 @@ def optimise_hyperband(
     rng = np.random.default_rng(seed)
 
     eta = reduction_factor
-    s_max = int(np.floor(np.log(max_trees / min_trees) / np.log(eta)))
+    assert eta > 1, "Reduction factor must be greater than 1"
+    s_max = int(np.floor(np.log(max_trees/min_trees) / np.log(eta)))
     B = (s_max+1) * max_trees
 
     best_score = float('-inf')
+    best_config = None
     history = []
 
     for s in range(s_max, -1, -1):
-        n = np.ceil((B/max_trees)*(eta**s / (s+1)))
-        r = max_trees*(eta**(s_max-s))
-        configs = [sample_configuration(rng) for _ in range(n)]
+        n = int(np.ceil((B/max_trees)*(eta**s / (s+1))))
+        r = int(max_trees*(eta**-(s_max-s)))
+        configs = [(sample_configuration(rng), None) for _ in range(n)]
         
         for i in range(s+1):
-            n_i = int(np.floor(n*(eta**-i)))
             r_i = int(r*(eta**i))
-            L = [evaluator(config, r_i, seed) for config in configs]
+            L = [evaluator(config, r_i, seed, model) for config, model in configs]
+            history.extend([{**{k: v for k, v in result.items() if k != "model"},"n_trees":r_i} for result in L])
             scores = [l["objective"] for l in L]
             max_idx = np.argmax(scores)
             best_current_score = scores[max_idx]
             if best_current_score > best_score:
                 best_score = best_current_score
-                best_config = configs[max_idx]
-            configs = [configs[idx] for idx in np.argpartition(scores, -np.floor(n_i/eta))[int(-np.floor(n_i/eta)):]]
-            history.extend(L)
+                best_config = configs[max_idx][0]
 
+            if i < s:
+                keep = max(1, int(np.floor(len(configs) / eta)))
+                keep_idx = np.argsort(scores)[-keep:]
+                configs = [(configs[idx][0], L[idx]["model"]) for idx in keep_idx]
+          
     return best_config, history
         

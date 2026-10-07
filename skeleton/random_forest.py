@@ -46,19 +46,24 @@ def sample_configuration(rng: np.random.Generator) -> Config:
     return {key: rng.choice(values) for key, values in SEARCH_SPACE.items()}
     
 
-def make_classifier(config: Config, n_estimators: int, seed: int) -> RandomForestClassifier:
+def make_classifier(config: Config, n_estimators: int, seed: int, model: Any=None) -> RandomForestClassifier:
     """Use {} for the untuned baseline; omitted parameters keep library defaults.
 
     Tree count, seed, and parallelism are set here, outside the search space.
     Invalid configurations are left for scikit-learn to reject during fitting.
     """
 
-    return RandomForestClassifier(
+    if model is None:
+        rf = RandomForestClassifier(
         n_estimators=n_estimators,
         random_state=seed,
         n_jobs=N_JOBS,
+        warm_start=True,
         **config,
     )
+    else: 
+        rf = model.set_params(n_estimators=n_estimators)
+    return rf
 
 
 def predictive_metrics(
@@ -99,9 +104,9 @@ def make_evaluator(
     The returned dictionary is an optional in-memory interface.
     """
 
-    def evaluate(config: Config, n_trees: int, seed: int) -> dict[str, Any]:
+    def evaluate(config: Config, n_trees: int, seed: int, model: Any=None) -> dict[str, Any]:
         start = perf_counter()
-        model = make_classifier(config, n_trees, seed)
+        model = make_classifier(config, n_trees, seed, model)
         model.fit(X_train, y_train)
         metrics = predictive_metrics(model, X_valid, y_valid)
         objective = validation_objective(metrics)
@@ -111,6 +116,7 @@ def make_evaluator(
             "objective": float(objective),
             "n_trees": int(n_trees),
             "elapsed_sec": float(perf_counter() - start),
+            "model": model,
         }
 
     return evaluate
