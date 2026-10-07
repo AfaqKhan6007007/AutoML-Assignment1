@@ -13,7 +13,7 @@ from typing import Any
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import balanced_accuracy_score
+from sklearn.metrics import balanced_accuracy_score, f1_score
 
 Config = dict[str, Any]
 Evaluator = Callable[[Config, int, int], dict[str, Any]]
@@ -34,7 +34,7 @@ SEARCH_SPACE = {
 
 # Chosen metrif + obj f
 METRIC = "balanced_accuracy"
-
+AUX_METRIC = "f1_score"
 
 def sample_configuration(rng: np.random.Generator) -> Config:
     """TODO if using this helper: sample a legal configuration using rng.
@@ -80,7 +80,9 @@ def predictive_metrics(
     and the foundation comparison. This function must not fit the model.
     """
     y_pred = model.predict(X)
-    return {METRIC: balanced_accuracy_score(y,y_pred)}
+    
+    return {METRIC: balanced_accuracy_score(y,y_pred),
+            AUX_METRIC: f1_score(y, y_pred, average='macro')}
     
     raise NotImplementedError("Implement predictive_metrics in random_forest.py")
 
