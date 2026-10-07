@@ -43,8 +43,12 @@ def sample_configuration(rng: np.random.Generator) -> Config:
     dependencies between parameters if you extend the example search space.
     """
 
-    return {key: rng.choice(values) for key, values in SEARCH_SPACE.items()}
-    
+    configuration = {}
+    for k,v in SEARCH_SPACE.items():
+        idx = rng.choice(len(v))
+        configuration[k] = v[idx]
+    return configuration    
+   
 
 def make_classifier(config: Config, n_estimators: int, seed: int, model: Any=None) -> RandomForestClassifier:
     """Use {} for the untuned baseline; omitted parameters keep library defaults.
