@@ -31,10 +31,8 @@ def run_foundation_model(splits: DataSplits, seed: int, context_size: int=1000) 
     Retain results for comparing performance and compute with the baseline
     and each tuned forest. See Section 3.5 of the assignment.
     """
-    print(splits.X_train.shape)
     start = perf_counter()
     X_fit, y_train_valid, X_test, y_test = prepare_final_data(splits)
-    print(X_fit.shape)
     X_context, _, y_context, _ = train_test_split(
     X_fit,
     y_train_valid,

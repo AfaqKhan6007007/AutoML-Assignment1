@@ -22,11 +22,17 @@ import json
 
 import warnings
 
+# turn off class weight warning, not relevant as same stratum is used for warm start runs.
 warnings.filterwarnings(
     "ignore",
     message=r'class_weight presets "balanced" or "balanced_subsample" are not recommended for warm_start.*',
     category=UserWarning,
 )
+
+# ensure correct path for saving 
+script_dir = Path(__file__).resolve().parent
+output_dir = script_dir / "../data"
+output_dir.mkdir(parents=True, exist_ok=True)
 
 # Update this if the provided largest dataset is replaced.
 FOUNDATION_DATASET = "covertype"
@@ -164,10 +170,10 @@ def main() -> None:
         # TODO: save results in a format of your choice, along with the settings
         # needed to reproduce the run. Retain enough information for your plots
         # and tables. This example only prints final results; it saves no files.
-        dir = f"../data"
-        if not os.path.exists(dir):
-            os.makedirs(dir)
-        with open(f"{dir}/expseed_{args.seed}_{name}.json", "w") as f:
+
+        filename = f"expseed_{args.seed}_{name}.json"
+        file_path = output_dir / filename
+        with open(file_path, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2)
 
 if __name__ == "__main__":
