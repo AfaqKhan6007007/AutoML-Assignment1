@@ -82,6 +82,8 @@ Monte-carlo sampling
 BoTorch. Surrogate model: GP. 
 
 - Hyperband
+
+Total trees trained: 33033
 Reduction factor (eta) = 3, Max trees = 81. 
 Are trees reused (warmstart), this should be taken into account in number of trees trained. 
 
