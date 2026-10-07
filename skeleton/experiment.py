@@ -17,6 +17,7 @@ from random_forest import final_test_evaluation, make_evaluator
 from random_search import optimise_random_search
 from smbo import optimise_smbo
 from tabular_foundation import run_foundation_model
+import json
 
 # Update this if the provided largest dataset is replaced.
 FOUNDATION_DATASET = "covertype"
@@ -147,7 +148,8 @@ def main() -> None:
         # TODO: save results in a format of your choice, along with the settings
         # needed to reproduce the run. Retain enough information for your plots
         # and tables. This example only prints final results; it saves no files.
-
+        with open(f"../data/expseed_{args.seed}_{name}.json", "w") as f:
+            json.dump(results, f, indent=2)
 
 if __name__ == "__main__":
     main()

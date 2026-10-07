@@ -45,7 +45,7 @@ def optimise_hyperband(
     best_score = float('-inf')
     best_config = None
     history = []
-
+    counter = 0
     for s in range(s_max, -1, -1):
         n = int(np.ceil((B/max_trees)*(eta**s / (s+1))))
         r = int(max_trees*(eta**-(s_max-s)))
@@ -54,7 +54,11 @@ def optimise_hyperband(
         for i in range(s+1):
             r_i = int(r*(eta**i))
             L = [evaluator(config, r_i, seed, model) for config, model in configs]
-            history.extend([{**{k: v for k, v in result.items() if k != "model"},"n_trees":r_i} for result in L])
+            history.extend([
+                {**{k: v for k, v in result.items() if k != "model"},
+                    "trial": counter} for result in L
+            ])
+            counter += 1
             scores = [l["objective"] for l in L]
             max_idx = np.argmax(scores)
             best_current_score = scores[max_idx]

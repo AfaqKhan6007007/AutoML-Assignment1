@@ -34,6 +34,7 @@ def optimise_smbo(
         config = {hp: trial.suggest_categorical(hp, choices) for hp, choices in SEARCH_SPACE.items()}
     
         result = evaluator(config, n_trees, seed)
+        result["trial"] = trial.number
         history.append(result)
         return result["objective"]
                      

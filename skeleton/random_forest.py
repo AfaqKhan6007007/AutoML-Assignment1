@@ -116,7 +116,9 @@ def make_evaluator(
         model.fit(X_train, y_train)
         metrics = predictive_metrics(model, X_valid, y_valid)
         objective = validation_objective(metrics)
+        config_id = hash(frozenset(config.items()))
         return {
+            "config_id": str(config_id),
             "configuration": dict(config),
             "metrics": metrics,
             "objective": float(objective),

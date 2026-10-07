@@ -28,15 +28,16 @@ def optimise_random_search(
     """
     rng = np.random.default_rng(seed=seed)
     best_current_score = None
-    beste_current_config = None
+    best_current_config = None
     history = [] 
-    for _ in range(n_trials):
+    for i in range(n_trials):
         configuration = sample_configuration(rng)
         result = evaluator(configuration, n_trees, seed)
         if result["objective"] > best_current_score:
             best_current_score = result["objective"]
-            beste_current_config = configuration
+            best_current_config = configuration
+        result["trial"] = i
         history.append(result)
-    return Config(**beste_current_config), history
+    return Config(**best_current_config), history
 
 
