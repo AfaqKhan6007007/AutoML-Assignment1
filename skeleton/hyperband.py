@@ -67,5 +67,5 @@ def optimise_hyperband(
                 keep_idx = np.argsort(scores)[-keep:]
                 configs = [(configs[idx][0], L[idx]["model"]) for idx in keep_idx]
           
-    return best_config, history
+    return Config(**best_config), history
         

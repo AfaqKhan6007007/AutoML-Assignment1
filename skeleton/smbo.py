@@ -8,7 +8,11 @@ from __future__ import annotations
 
 from typing import Any
 
-from random_forest import Config, Evaluator
+from random_forest import Config, Evaluator, sample_configuration, SEARCH_SPACE
+
+import optuna
+
+import numpy as np
 
 
 def optimise_smbo(
@@ -26,4 +30,17 @@ def optimise_smbo(
     Return the selected configuration and results needed for your analysis.
     """
 
-    raise NotImplementedError
+    history = []
+    rng = np.random.default_rng(seed)
+    def objective(trial, rng=rng):
+        config = {hp: trial.suggest_categorical(hp, choices) for hp, choices in SEARCH_SPACE.items()}
+    
+        result = evaluator(config, n_trees, seed)
+        history.append(result)
+        return result["objective"]
+                     
+    study = optuna.create_study(direction="maximize", sampler=optuna.samplers.TPESampler(seed=seed))
+    study.optimize(objective, n_trials=n_trials)
+
+    return Config(**study.best_params), history
+
