@@ -7,6 +7,7 @@ to save them and record the settings needed to reproduce your study.
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 from time import perf_counter
 from typing import Any
@@ -18,6 +19,14 @@ from random_search import optimise_random_search
 from smbo import optimise_smbo
 from tabular_foundation import run_foundation_model
 import json
+
+import warnings
+
+warnings.filterwarnings(
+    "ignore",
+    message=r'class_weight presets "balanced" or "balanced_subsample" are not recommended for warm_start.*',
+    category=UserWarning,
+)
 
 # Update this if the provided largest dataset is replaced.
 FOUNDATION_DATASET = "covertype"
@@ -45,6 +54,12 @@ PROFILES: dict[str, dict[str, Any]] = {
         "min_trees": 3,
         "max_trees": 243,
         "n_trials": 24,
+    },
+    "exp": {
+        "max_samples": None,
+        "min_trees": 3,
+        "max_trees": 243,
+        "n_trials": 136, # equivalent to number of trees trained with hyperband 
     },
 }
 
@@ -148,7 +163,10 @@ def main() -> None:
         # TODO: save results in a format of your choice, along with the settings
         # needed to reproduce the run. Retain enough information for your plots
         # and tables. This example only prints final results; it saves no files.
-        with open(f"../data/expseed_{args.seed}_{name}.json", "w") as f:
+        dir = f"../data"
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+        with open(f"{dir}/expseed_{args.seed}_{name}.json", "w") as f:
             json.dump(results, f, indent=2)
 
 if __name__ == "__main__":

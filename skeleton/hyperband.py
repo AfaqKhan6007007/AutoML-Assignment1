@@ -46,13 +46,19 @@ def optimise_hyperband(
     best_config = None
     history = []
     counter = 0
+    total_configurations_trained = 0
+    total_trees_trained = 0
+    
     for s in range(s_max, -1, -1):
         n = int(np.ceil((B/max_trees)*(eta**s / (s+1))))
-        r = int(max_trees*(eta**-(s_max-s)))
+        print(n)
+        r = int(min_trees*(eta**(s_max-s)))
         configs = [(sample_configuration(rng), None) for _ in range(n)]
-        
+        total_configurations_trained+=n
         for i in range(s+1):
             r_i = int(r*(eta**i))
+            n_i = len(configs)
+            total_trees_trained += n_i * (r_i - (r_i//eta))
             L = [evaluator(config, r_i, seed, model) for config, model in configs]
             history.extend([
                 {**{k: v for k, v in result.items() if k != "model"},
@@ -70,6 +76,7 @@ def optimise_hyperband(
                 keep = max(1, int(np.floor(len(configs) / eta)))
                 keep_idx = np.argsort(scores)[-keep:]
                 configs = [(configs[idx][0], L[idx]["model"]) for idx in keep_idx]
-          
+
+    print(f"Total - trees trained: {total_trees_trained} | configurations trained: {total_configurations_trained}")
     return Config(**best_config), history
         
