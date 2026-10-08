@@ -101,11 +101,8 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
     temporal = False
     if name == TIMESERIES_DS:
         temporal = True
-    if name == "covertype":
-        max_samples = 100000
-    else:
-        profile["max_samples"]
-    splits = load_and_split(name, args.cache_dir, max_samples, args.split_seed, temporal=temporal)
+
+    splits = load_and_split(name, args.cache_dir, profile["max_samples"], args.split_seed, temporal=temporal)
     results = []
     forest_methods = {"default", "random", "smbo", "hyperband"}.intersection(args.methods)
     if forest_methods:
