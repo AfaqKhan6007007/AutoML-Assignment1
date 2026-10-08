@@ -4,7 +4,7 @@
     "method": "hyperband",
     "seed": 17,
     "configuration": {
-      "max_depth": 16,
+      "max_depth": 8,
       "max_features": "sqrt",
       "min_samples_leaf": 4,
       "min_samples_split": 16,
@@ -12,7 +12,7 @@
     },
     "history": [
       {
-        "config_id": "-180442055359125876",
+        "config_id": "7873936710485567465",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -26,11 +26,11 @@
         },
         "objective": 0.9211956521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.13650480000001153,
+        "elapsed_sec": 0.0533173000003444,
         "trial": 0
       },
       {
-        "config_id": "-3609802444444388167",
+        "config_id": "-3081662868943436934",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -44,11 +44,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.09904990000006819,
+        "elapsed_sec": 0.06061420000060025,
         "trial": 0
       },
       {
-        "config_id": "7955563186036189717",
+        "config_id": "-8563790945653838914",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -62,11 +62,11 @@
         },
         "objective": 0.9465579710144928,
         "n_trees": 3,
-        "elapsed_sec": 0.09839099999999235,
+        "elapsed_sec": 0.06477230000018608,
         "trial": 0
       },
       {
-        "config_id": "-848350966017004728",
+        "config_id": "-8106050292256847467",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -80,11 +80,11 @@
         },
         "objective": 0.9211956521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.0956932000000279,
+        "elapsed_sec": 0.06265989999974408,
         "trial": 0
       },
       {
-        "config_id": "6153729460409415116",
+        "config_id": "-2943035686051711688",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -98,11 +98,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.09585279999998875,
+        "elapsed_sec": 0.04438540000046487,
         "trial": 0
       },
       {
-        "config_id": "-2982990035825922962",
+        "config_id": "-1129641335378133722",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -116,11 +116,11 @@
         },
         "objective": 0.9202898550724637,
         "n_trees": 3,
-        "elapsed_sec": 0.1162970000000314,
+        "elapsed_sec": 0.058472500000789296,
         "trial": 0
       },
       {
-        "config_id": "-7935186153579002852",
+        "config_id": "7315850684576828159",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -134,11 +134,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.17149219999998877,
+        "elapsed_sec": 0.05898509999951784,
         "trial": 0
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -152,11 +152,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.13812749999999596,
+        "elapsed_sec": 0.04744669999945472,
         "trial": 0
       },
       {
-        "config_id": "4696547090305954955",
+        "config_id": "2380566465149913472",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -170,11 +170,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 3,
-        "elapsed_sec": 0.14718779999998333,
+        "elapsed_sec": 0.04905789999975241,
         "trial": 0
       },
       {
-        "config_id": "-2139409217932983754",
+        "config_id": "6570967170876234319",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -188,11 +188,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.13968360000001212,
+        "elapsed_sec": 0.06065660000058415,
         "trial": 0
       },
       {
-        "config_id": "-131310091810790940",
+        "config_id": "-4435971551434929241",
         "configuration": {
           "max_depth": 4,
           "max_features": 1.0,
@@ -206,11 +206,11 @@
         },
         "objective": 0.9153079710144928,
         "n_trees": 3,
-        "elapsed_sec": 0.10676429999989523,
+        "elapsed_sec": 0.058143700000073295,
         "trial": 0
       },
       {
-        "config_id": "1436043396912513683",
+        "config_id": "-3884329412563241034",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -224,11 +224,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.10603160000005118,
+        "elapsed_sec": 0.04700610000054439,
         "trial": 0
       },
       {
-        "config_id": "-7199320710285425828",
+        "config_id": "2689380355038217068",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -242,11 +242,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.09205569999994623,
+        "elapsed_sec": 0.05497049999939918,
         "trial": 0
       },
       {
-        "config_id": "5407650662572021158",
+        "config_id": "3875411800456611329",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -260,11 +260,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.08538020000003144,
+        "elapsed_sec": 0.04497540000011213,
         "trial": 0
       },
       {
-        "config_id": "8352204309049466041",
+        "config_id": "-5560689588292066583",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -278,11 +278,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.08141560000001391,
+        "elapsed_sec": 0.054711299999326,
         "trial": 0
       },
       {
-        "config_id": "5703113786195571906",
+        "config_id": "5800204045263405628",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -296,11 +296,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.07631190000006427,
+        "elapsed_sec": 0.0448034999999436,
         "trial": 0
       },
       {
-        "config_id": "2635005085526313458",
+        "config_id": "7956414352824612948",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -314,11 +314,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.08313629999997829,
+        "elapsed_sec": 0.05370229999971343,
         "trial": 0
       },
       {
-        "config_id": "-1157467373300367269",
+        "config_id": "4653639946598368260",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -332,11 +332,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.0720417999999654,
+        "elapsed_sec": 0.04303780000009283,
         "trial": 0
       },
       {
-        "config_id": "2119997153828209836",
+        "config_id": "-7846635917586040057",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -350,11 +350,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.0677939999999353,
+        "elapsed_sec": 0.05757959999937157,
         "trial": 0
       },
       {
-        "config_id": "-3781004605657569168",
+        "config_id": "2065734370813830044",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -368,11 +368,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.07168139999998857,
+        "elapsed_sec": 0.06443779999972321,
         "trial": 0
       },
       {
-        "config_id": "3940268810177772228",
+        "config_id": "-7081901889219000173",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -386,11 +386,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.0685263999999961,
+        "elapsed_sec": 0.047622400000363996,
         "trial": 0
       },
       {
-        "config_id": "2504402686766795153",
+        "config_id": "-5622419263834168549",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -404,11 +404,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.0657415000000583,
+        "elapsed_sec": 0.05986399999983405,
         "trial": 0
       },
       {
-        "config_id": "-12028979140394655",
+        "config_id": "6855965477714703856",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -422,11 +422,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.062450699999999415,
+        "elapsed_sec": 0.04835040000034496,
         "trial": 0
       },
       {
-        "config_id": "2176815994643124722",
+        "config_id": "-291476783315186197",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -440,11 +440,11 @@
         },
         "objective": 0.9415760869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.04977519999999913,
+        "elapsed_sec": 0.057559500000024855,
         "trial": 0
       },
       {
-        "config_id": "-3513498077852751078",
+        "config_id": "8941080625851782050",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -458,11 +458,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.0602228999999852,
+        "elapsed_sec": 0.06274310000026162,
         "trial": 0
       },
       {
-        "config_id": "-6029225718630418930",
+        "config_id": "-750672502968028103",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -476,11 +476,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.06340460000001258,
+        "elapsed_sec": 0.05813880000005156,
         "trial": 0
       },
       {
-        "config_id": "-6649497817807949931",
+        "config_id": "-796520513196430307",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -494,11 +494,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.04707419999999729,
+        "elapsed_sec": 0.04493940000065777,
         "trial": 0
       },
       {
-        "config_id": "-5326302979633548425",
+        "config_id": "8180330488254558784",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -512,11 +512,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.04765559999998459,
+        "elapsed_sec": 0.04483710000022256,
         "trial": 0
       },
       {
-        "config_id": "-3322332332187457256",
+        "config_id": "-7570179856731629570",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.5,
@@ -530,11 +530,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.060944700000050034,
+        "elapsed_sec": 0.05736350000006496,
         "trial": 0
       },
       {
-        "config_id": "-1715740007472625013",
+        "config_id": "8560312734657739776",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -548,11 +548,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.05852709999999206,
+        "elapsed_sec": 0.056617399999595364,
         "trial": 0
       },
       {
-        "config_id": "5346538860979724501",
+        "config_id": "8526645318433340635",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -566,11 +566,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.044907499999908396,
+        "elapsed_sec": 0.04385259999980917,
         "trial": 0
       },
       {
-        "config_id": "-4415944210040764013",
+        "config_id": "8947259538624630965",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -584,11 +584,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.04449139999996987,
+        "elapsed_sec": 0.042878899999777786,
         "trial": 0
       },
       {
-        "config_id": "-7428627402032797548",
+        "config_id": "6559837755447129987",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -602,11 +602,11 @@
         },
         "objective": 0.9420289855072463,
         "n_trees": 3,
-        "elapsed_sec": 0.04451399999993555,
+        "elapsed_sec": 0.04279640000004292,
         "trial": 0
       },
       {
-        "config_id": "-2033178090799648268",
+        "config_id": "5863348051902600910",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -620,11 +620,11 @@
         },
         "objective": 0.931159420289855,
         "n_trees": 3,
-        "elapsed_sec": 0.04672549999997955,
+        "elapsed_sec": 0.044427700000596815,
         "trial": 0
       },
       {
-        "config_id": "-866264992899942442",
+        "config_id": "4262713423352416370",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -638,11 +638,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.04508109999994758,
+        "elapsed_sec": 0.041930999999749474,
         "trial": 0
       },
       {
-        "config_id": "-7603706210531659603",
+        "config_id": "-3741055863061946515",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.75,
@@ -656,11 +656,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.043633800000066,
+        "elapsed_sec": 0.04217799999969429,
         "trial": 0
       },
       {
-        "config_id": "3678359260077076486",
+        "config_id": "-1089452011135523978",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -674,11 +674,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.04342589999998836,
+        "elapsed_sec": 0.0418470000004163,
         "trial": 0
       },
       {
-        "config_id": "5888044213679831949",
+        "config_id": "-7634311856983817296",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -692,11 +692,11 @@
         },
         "objective": 0.8836050724637681,
         "n_trees": 3,
-        "elapsed_sec": 0.0440085000000181,
+        "elapsed_sec": 0.04338209999968967,
         "trial": 0
       },
       {
-        "config_id": "2947036271007350090",
+        "config_id": "-4749245974052441343",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -710,11 +710,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.04284429999995609,
+        "elapsed_sec": 0.041837899999336514,
         "trial": 0
       },
       {
-        "config_id": "-5538163631827351553",
+        "config_id": "2028832444571959278",
         "configuration": {
           "max_depth": 64,
           "max_features": 1.0,
@@ -728,11 +728,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.04415849999998045,
+        "elapsed_sec": 0.041219500000806875,
         "trial": 0
       },
       {
-        "config_id": "5407650662572021158",
+        "config_id": "3875411800456611329",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -746,11 +746,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.04560419999995702,
+        "elapsed_sec": 0.041547499999978754,
         "trial": 0
       },
       {
-        "config_id": "3645690587152324158",
+        "config_id": "-1790368678252741007",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -764,11 +764,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.04535789999999906,
+        "elapsed_sec": 0.04181929999958811,
         "trial": 0
       },
       {
-        "config_id": "8070441282451512362",
+        "config_id": "961191944926856743",
         "configuration": {
           "max_depth": 64,
           "max_features": 1.0,
@@ -782,11 +782,11 @@
         },
         "objective": 0.9098731884057971,
         "n_trees": 3,
-        "elapsed_sec": 0.05418350000002192,
+        "elapsed_sec": 0.05129610000039975,
         "trial": 0
       },
       {
-        "config_id": "1182908643139231426",
+        "config_id": "-667266760138061797",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -800,11 +800,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.053365900000017064,
+        "elapsed_sec": 0.05106499999965308,
         "trial": 0
       },
       {
-        "config_id": "-4153601444192360114",
+        "config_id": "-189566363412014997",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -818,11 +818,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.041455100000007405,
+        "elapsed_sec": 0.03917009999986476,
         "trial": 0
       },
       {
-        "config_id": "5676773812169410380",
+        "config_id": "-8249001148164377608",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -836,11 +836,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.04235029999995277,
+        "elapsed_sec": 0.03927349999958096,
         "trial": 0
       },
       {
-        "config_id": "-3992701144083090537",
+        "config_id": "6849074442590381748",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -854,11 +854,11 @@
         },
         "objective": 0.9524456521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.041665899999998146,
+        "elapsed_sec": 0.03952339999977994,
         "trial": 0
       },
       {
-        "config_id": "-5839652671147710100",
+        "config_id": "2974156212825482669",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -872,11 +872,11 @@
         },
         "objective": 0.9415760869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.042808400000012625,
+        "elapsed_sec": 0.040805799999361625,
         "trial": 0
       },
       {
-        "config_id": "5676773812169410380",
+        "config_id": "-8249001148164377608",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -890,11 +890,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.040437000000110856,
+        "elapsed_sec": 0.03922229999989213,
         "trial": 0
       },
       {
-        "config_id": "6601279367846470374",
+        "config_id": "7274347271184166987",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -908,11 +908,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.05101090000005115,
+        "elapsed_sec": 0.04955630000040401,
         "trial": 0
       },
       {
-        "config_id": "4749940837721063282",
+        "config_id": "6624624269488203292",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -926,11 +926,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.04007119999994302,
+        "elapsed_sec": 0.0390028000001621,
         "trial": 0
       },
       {
-        "config_id": "-50096570853697347",
+        "config_id": "-3857288145397712162",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -944,11 +944,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.04206560000000081,
+        "elapsed_sec": 0.03999600000042847,
         "trial": 0
       },
       {
-        "config_id": "6028903399075713841",
+        "config_id": "-1099710481422916140",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -962,11 +962,11 @@
         },
         "objective": 0.9524456521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.040014799999994466,
+        "elapsed_sec": 0.038047399999413756,
         "trial": 0
       },
       {
-        "config_id": "5678650820299247866",
+        "config_id": "-6775173069963057187",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -980,11 +980,11 @@
         },
         "objective": 0.9519927536231885,
         "n_trees": 3,
-        "elapsed_sec": 0.041993899999965834,
+        "elapsed_sec": 0.03930930000024091,
         "trial": 0
       },
       {
-        "config_id": "8186115871206154226",
+        "config_id": "7437595142072417221",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -998,11 +998,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 3,
-        "elapsed_sec": 0.04104059999997389,
+        "elapsed_sec": 0.03945670000030077,
         "trial": 0
       },
       {
-        "config_id": "-3972437663583036449",
+        "config_id": "-8150635385955225189",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1016,11 +1016,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.03890719999992598,
+        "elapsed_sec": 0.038295499999549065,
         "trial": 0
       },
       {
-        "config_id": "5960247479562852804",
+        "config_id": "8428673556149357376",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -1034,11 +1034,11 @@
         },
         "objective": 0.9202898550724637,
         "n_trees": 3,
-        "elapsed_sec": 0.049514899999962836,
+        "elapsed_sec": 0.03797940000004019,
         "trial": 0
       },
       {
-        "config_id": "6925186015153467689",
+        "config_id": "-5080821229921967655",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -1052,11 +1052,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.04043220000005476,
+        "elapsed_sec": 0.038567499999771826,
         "trial": 0
       },
       {
-        "config_id": "2458227712751448483",
+        "config_id": "-6754480336921655120",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1070,11 +1070,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.04963420000001406,
+        "elapsed_sec": 0.03810330000032991,
         "trial": 0
       },
       {
-        "config_id": "-4884185347172240826",
+        "config_id": "-9217652148054611113",
         "configuration": {
           "max_depth": 8,
           "max_features": 1.0,
@@ -1088,11 +1088,11 @@
         },
         "objective": 0.9211956521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.04044280000005074,
+        "elapsed_sec": 0.038710200000423356,
         "trial": 0
       },
       {
-        "config_id": "8170790472549691817",
+        "config_id": "-7796584979933569258",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1106,11 +1106,11 @@
         },
         "objective": 0.962409420289855,
         "n_trees": 3,
-        "elapsed_sec": 0.037880099999938466,
+        "elapsed_sec": 0.037544099999649916,
         "trial": 0
       },
       {
-        "config_id": "-8913361311088151332",
+        "config_id": "5613672582107907474",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -1124,11 +1124,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.038569799999891075,
+        "elapsed_sec": 0.03748150000046735,
         "trial": 0
       },
       {
-        "config_id": "5960247479562852804",
+        "config_id": "8428673556149357376",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -1142,11 +1142,11 @@
         },
         "objective": 0.9202898550724637,
         "n_trees": 3,
-        "elapsed_sec": 0.03865459999997256,
+        "elapsed_sec": 0.03745509999953356,
         "trial": 0
       },
       {
-        "config_id": "-7826413357452374495",
+        "config_id": "6226893032957432893",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -1160,11 +1160,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.03878950000000714,
+        "elapsed_sec": 0.04220840000016324,
         "trial": 0
       },
       {
-        "config_id": "-6480185981992019741",
+        "config_id": "147103214479344283",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -1178,11 +1178,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.039192399999933514,
+        "elapsed_sec": 0.13644430000022112,
         "trial": 0
       },
       {
-        "config_id": "-7493215312565541201",
+        "config_id": "-1335234025596995080",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -1196,11 +1196,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03781409999999141,
+        "elapsed_sec": 0.03973580000001675,
         "trial": 0
       },
       {
-        "config_id": "3324332060196622493",
+        "config_id": "-8398680612332963463",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -1214,11 +1214,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.039152500000000146,
+        "elapsed_sec": 0.04279880000012781,
         "trial": 0
       },
       {
-        "config_id": "7468611365509775574",
+        "config_id": "-3069063349515649047",
         "configuration": {
           "max_depth": 64,
           "max_features": 1.0,
@@ -1232,11 +1232,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.0384511999999404,
+        "elapsed_sec": 0.05102439999973285,
         "trial": 0
       },
       {
-        "config_id": "-6571777459679363170",
+        "config_id": "-1455198020377654047",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -1250,11 +1250,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.039956299999971634,
+        "elapsed_sec": 0.04179569999996602,
         "trial": 0
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1268,11 +1268,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03861819999997351,
+        "elapsed_sec": 0.04070750000028056,
         "trial": 0
       },
       {
-        "config_id": "909687280113238210",
+        "config_id": "8533042753356608672",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -1286,11 +1286,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 3,
-        "elapsed_sec": 0.0395631000000094,
+        "elapsed_sec": 0.04138539999985369,
         "trial": 0
       },
       {
-        "config_id": "8067911114612472269",
+        "config_id": "-1035455742490983737",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1304,11 +1304,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03828980000002957,
+        "elapsed_sec": 0.04004090000034921,
         "trial": 0
       },
       {
-        "config_id": "-1178304795194670132",
+        "config_id": "6961708136614215236",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -1322,11 +1322,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03848470000002635,
+        "elapsed_sec": 0.03997900000013033,
         "trial": 0
       },
       {
-        "config_id": "7587407837864303173",
+        "config_id": "-3414457191783450197",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -1340,11 +1340,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.03715799999997671,
+        "elapsed_sec": 0.039340500000434986,
         "trial": 0
       },
       {
-        "config_id": "3073341509856914591",
+        "config_id": "6255398134902878562",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -1358,11 +1358,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.03799919999994472,
+        "elapsed_sec": 0.03906699999970442,
         "trial": 0
       },
       {
-        "config_id": "4272658876528970067",
+        "config_id": "-1605023278907171388",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -1376,11 +1376,11 @@
         },
         "objective": 0.9465579710144928,
         "n_trees": 3,
-        "elapsed_sec": 0.0383024000000205,
+        "elapsed_sec": 0.040711100000407896,
         "trial": 0
       },
       {
-        "config_id": "-4844738543550421435",
+        "config_id": "6595867149296775714",
         "configuration": {
           "max_depth": 8,
           "max_features": 1.0,
@@ -1394,11 +1394,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 3,
-        "elapsed_sec": 0.03736499999990883,
+        "elapsed_sec": 0.049288199999864446,
         "trial": 0
       },
       {
-        "config_id": "8476492095975803430",
+        "config_id": "-1586746921807906174",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.75,
@@ -1412,11 +1412,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03764359999991029,
+        "elapsed_sec": 0.03842290000011417,
         "trial": 0
       },
       {
-        "config_id": "2101493068781416769",
+        "config_id": "4708636920417422481",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -1430,11 +1430,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 3,
-        "elapsed_sec": 0.03695059999995465,
+        "elapsed_sec": 0.03887800000029529,
         "trial": 0
       },
       {
-        "config_id": "-5486469042354303640",
+        "config_id": "4199481932835275750",
         "configuration": {
           "max_depth": 64,
           "max_features": 1.0,
@@ -1448,11 +1448,11 @@
         },
         "objective": 0.9211956521739131,
         "n_trees": 3,
-        "elapsed_sec": 0.03845300000000407,
+        "elapsed_sec": 0.05043949999981123,
         "trial": 0
       },
       {
-        "config_id": "-9168874830604549848",
+        "config_id": "-4286836165621270221",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -1466,11 +1466,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 3,
-        "elapsed_sec": 0.03708270000004177,
+        "elapsed_sec": 0.09999799999968673,
         "trial": 0
       },
       {
-        "config_id": "2458227712751448483",
+        "config_id": "-6754480336921655120",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1484,11 +1484,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.05584120000003168,
+        "elapsed_sec": 0.05817769999976008,
         "trial": 1
       },
       {
-        "config_id": "4749940837721063282",
+        "config_id": "6624624269488203292",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -1502,11 +1502,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.05492879999997058,
+        "elapsed_sec": 0.06021580000015092,
         "trial": 1
       },
       {
-        "config_id": "6601279367846470374",
+        "config_id": "7274347271184166987",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -1520,11 +1520,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.051193200000057004,
+        "elapsed_sec": 0.06013139999959094,
         "trial": 1
       },
       {
-        "config_id": "-3322332332187457256",
+        "config_id": "-7570179856731629570",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.5,
@@ -1538,11 +1538,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04990069999996649,
+        "elapsed_sec": 0.06646679999994376,
         "trial": 1
       },
       {
-        "config_id": "6153729460409415116",
+        "config_id": "-2943035686051711688",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1556,11 +1556,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.04970300000002226,
+        "elapsed_sec": 0.05534030000035273,
         "trial": 1
       },
       {
-        "config_id": "8352204309049466041",
+        "config_id": "-5560689588292066583",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -1574,11 +1574,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.05434760000002825,
+        "elapsed_sec": 0.06538559999989957,
         "trial": 1
       },
       {
-        "config_id": "5678650820299247866",
+        "config_id": "-6775173069963057187",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -1592,11 +1592,11 @@
         },
         "objective": 0.8890398550724637,
         "n_trees": 9,
-        "elapsed_sec": 0.04218079999998281,
+        "elapsed_sec": 0.055639700000028824,
         "trial": 1
       },
       {
-        "config_id": "-3992701144083090537",
+        "config_id": "6849074442590381748",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -1610,11 +1610,11 @@
         },
         "objective": 0.931159420289855,
         "n_trees": 9,
-        "elapsed_sec": 0.05031839999992371,
+        "elapsed_sec": 0.05380130000048666,
         "trial": 1
       },
       {
-        "config_id": "6028903399075713841",
+        "config_id": "-1099710481422916140",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -1628,11 +1628,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.04944609999995464,
+        "elapsed_sec": 0.05301390000022366,
         "trial": 1
       },
       {
-        "config_id": "-7935186153579002852",
+        "config_id": "7315850684576828159",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1646,11 +1646,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.0549581999999873,
+        "elapsed_sec": 0.05644449999999779,
         "trial": 1
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1664,11 +1664,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.03793719999998757,
+        "elapsed_sec": 0.05405209999935323,
         "trial": 1
       },
       {
-        "config_id": "-6029225718630418930",
+        "config_id": "-750672502968028103",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1682,11 +1682,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.05447389999994812,
+        "elapsed_sec": 0.05910929999936343,
         "trial": 1
       },
       {
-        "config_id": "1436043396912513683",
+        "config_id": "-3884329412563241034",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -1700,11 +1700,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.05059089999997468,
+        "elapsed_sec": 0.054941299999882176,
         "trial": 1
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1718,11 +1718,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.038371299999994335,
+        "elapsed_sec": 0.05138040000019828,
         "trial": 1
       },
       {
-        "config_id": "-7603706210531659603",
+        "config_id": "-3741055863061946515",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.75,
@@ -1736,11 +1736,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04855659999998352,
+        "elapsed_sec": 0.051262599999972736,
         "trial": 1
       },
       {
-        "config_id": "1182908643139231426",
+        "config_id": "-667266760138061797",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -1754,11 +1754,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04978160000007392,
+        "elapsed_sec": 0.056016900000031455,
         "trial": 1
       },
       {
-        "config_id": "-7493215312565541201",
+        "config_id": "-1335234025596995080",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -1772,11 +1772,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04910870000003342,
+        "elapsed_sec": 0.05156410000017786,
         "trial": 1
       },
       {
-        "config_id": "-8913361311088151332",
+        "config_id": "5613672582107907474",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -1790,11 +1790,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.051123500000016975,
+        "elapsed_sec": 0.04941340000004857,
         "trial": 1
       },
       {
-        "config_id": "-3513498077852751078",
+        "config_id": "8941080625851782050",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -1808,11 +1808,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.054276599999980135,
+        "elapsed_sec": 0.05594990000008693,
         "trial": 1
       },
       {
-        "config_id": "8067911114612472269",
+        "config_id": "-1035455742490983737",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1826,11 +1826,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04893789999994169,
+        "elapsed_sec": 0.05124080000041431,
         "trial": 1
       },
       {
-        "config_id": "8170790472549691817",
+        "config_id": "-7796584979933569258",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -1844,11 +1844,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.03763859999992292,
+        "elapsed_sec": 0.052652900000794034,
         "trial": 1
       },
       {
-        "config_id": "-3972437663583036449",
+        "config_id": "-8150635385955225189",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -1862,11 +1862,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.05178969999997207,
+        "elapsed_sec": 0.057060099999944214,
         "trial": 1
       },
       {
-        "config_id": "-7199320710285425828",
+        "config_id": "2689380355038217068",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -1880,11 +1880,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.04862439999999424,
+        "elapsed_sec": 0.05027460000019346,
         "trial": 1
       },
       {
-        "config_id": "-2139409217932983754",
+        "config_id": "6570967170876234319",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -1898,11 +1898,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.049598600000081206,
+        "elapsed_sec": 0.05247400000007474,
         "trial": 1
       },
       {
-        "config_id": "-12028979140394655",
+        "config_id": "6855965477714703856",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -1916,11 +1916,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.038330800000039744,
+        "elapsed_sec": 0.05028180000044813,
         "trial": 1
       },
       {
-        "config_id": "5346538860979724501",
+        "config_id": "8526645318433340635",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -1934,11 +1934,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.04903070000000298,
+        "elapsed_sec": 0.03972589999921183,
         "trial": 1
       },
       {
-        "config_id": "6925186015153467689",
+        "config_id": "-5080821229921967655",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -1952,11 +1952,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.05049789999998211,
+        "elapsed_sec": 0.05248089999986405,
         "trial": 1
       },
       {
-        "config_id": "-3992701144083090537",
+        "config_id": "6849074442590381748",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -1970,11 +1970,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.06725410000001375,
+        "elapsed_sec": 0.07072520000019722,
         "trial": 2
       },
       {
-        "config_id": "-8913361311088151332",
+        "config_id": "5613672582107907474",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -1988,11 +1988,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.09223529999997027,
+        "elapsed_sec": 0.09159639999961655,
         "trial": 2
       },
       {
-        "config_id": "-7935186153579002852",
+        "config_id": "7315850684576828159",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -2006,11 +2006,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.08600560000002133,
+        "elapsed_sec": 0.09215760000006412,
         "trial": 2
       },
       {
-        "config_id": "-7493215312565541201",
+        "config_id": "-1335234025596995080",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -2024,11 +2024,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.06549389999997857,
+        "elapsed_sec": 0.06975529999999708,
         "trial": 2
       },
       {
-        "config_id": "-6029225718630418930",
+        "config_id": "-750672502968028103",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -2042,11 +2042,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.09431289999997716,
+        "elapsed_sec": 0.09425699999974313,
         "trial": 2
       },
       {
-        "config_id": "-7603706210531659603",
+        "config_id": "-3741055863061946515",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.75,
@@ -2060,11 +2060,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.07578810000006797,
+        "elapsed_sec": 0.07405319999998028,
         "trial": 2
       },
       {
-        "config_id": "-3513498077852751078",
+        "config_id": "8941080625851782050",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -2078,11 +2078,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.09615550000000894,
+        "elapsed_sec": 0.10002950000034616,
         "trial": 2
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -2096,11 +2096,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.07695139999998446,
+        "elapsed_sec": 0.08108600000014121,
         "trial": 2
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -2114,11 +2114,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.07257379999998648,
+        "elapsed_sec": 0.0698763999998846,
         "trial": 2
       },
       {
-        "config_id": "-3992701144083090537",
+        "config_id": "6849074442590381748",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -2132,11 +2132,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 81,
-        "elapsed_sec": 0.16552059999992252,
+        "elapsed_sec": 0.17647420000048442,
         "trial": 3
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -2150,11 +2150,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 81,
-        "elapsed_sec": 0.17115679999994882,
+        "elapsed_sec": 0.17877769999995508,
         "trial": 3
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -2168,11 +2168,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 81,
-        "elapsed_sec": 0.18319510000003447,
+        "elapsed_sec": 0.18581449999965116,
         "trial": 3
       },
       {
-        "config_id": "-8535702133093998479",
+        "config_id": "9192336525850503582",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -2186,11 +2186,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 243,
-        "elapsed_sec": 0.46169190000000526,
+        "elapsed_sec": 0.506938600000467,
         "trial": 4
       },
       {
-        "config_id": "-4203026486686430600",
+        "config_id": "7133488225304296177",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -2204,11 +2204,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.07047699999998258,
+        "elapsed_sec": 0.06826300000011543,
         "trial": 5
       },
       {
-        "config_id": "-7596142730540078697",
+        "config_id": "-5824636107628860792",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -2222,11 +2222,11 @@
         },
         "objective": 0.8836050724637681,
         "n_trees": 9,
-        "elapsed_sec": 0.06558059999997568,
+        "elapsed_sec": 0.06334619999961433,
         "trial": 5
       },
       {
-        "config_id": "-5836951405328732418",
+        "config_id": "4745314831300374512",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -2240,11 +2240,11 @@
         },
         "objective": 0.8845108695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.0523324999999204,
+        "elapsed_sec": 0.05779009999969276,
         "trial": 5
       },
       {
-        "config_id": "6700649955203333015",
+        "config_id": "6404372836687759483",
         "configuration": {
           "max_depth": 4,
           "max_features": 1.0,
@@ -2258,11 +2258,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 9,
-        "elapsed_sec": 0.07015609999996286,
+        "elapsed_sec": 0.06678130000000237,
         "trial": 5
       },
       {
-        "config_id": "-1732310720991814397",
+        "config_id": "3695589737581457794",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -2276,11 +2276,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.05395920000000842,
+        "elapsed_sec": 0.056189899999480986,
         "trial": 5
       },
       {
-        "config_id": "-3484884563084406650",
+        "config_id": "-7185869363097888386",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -2294,11 +2294,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.05328229999997802,
+        "elapsed_sec": 0.05496510000011767,
         "trial": 5
       },
       {
-        "config_id": "-4371729583364270776",
+        "config_id": "-3380276443012965753",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -2312,11 +2312,11 @@
         },
         "objective": 0.9098731884057971,
         "n_trees": 9,
-        "elapsed_sec": 0.05499699999995755,
+        "elapsed_sec": 0.05691449999994802,
         "trial": 5
       },
       {
-        "config_id": "-6489911683099839822",
+        "config_id": "-6330847386045493770",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -2330,11 +2330,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.06142529999999624,
+        "elapsed_sec": 0.05667089999951713,
         "trial": 5
       },
       {
-        "config_id": "-2519146602175643698",
+        "config_id": "-1560790444875361836",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -2348,11 +2348,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 9,
-        "elapsed_sec": 0.054043000000092434,
+        "elapsed_sec": 0.056454099999427854,
         "trial": 5
       },
       {
-        "config_id": "-866264992899942442",
+        "config_id": "4262713423352416370",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -2366,11 +2366,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.058653499999991254,
+        "elapsed_sec": 0.05402940000021772,
         "trial": 5
       },
       {
-        "config_id": "-351715528331788892",
+        "config_id": "-5216014055052647699",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -2384,11 +2384,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.061480100000039783,
+        "elapsed_sec": 0.05291860000033921,
         "trial": 5
       },
       {
-        "config_id": "1535823915008428540",
+        "config_id": "2241936400297651775",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -2402,11 +2402,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.059625000000096406,
+        "elapsed_sec": 0.053339999999479915,
         "trial": 5
       },
       {
-        "config_id": "-7652620489720803862",
+        "config_id": "-2671208279435792560",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -2420,11 +2420,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 9,
-        "elapsed_sec": 0.05568629999993391,
+        "elapsed_sec": 0.057468599999992875,
         "trial": 5
       },
       {
-        "config_id": "-697858458289083314",
+        "config_id": "-7010994772055364220",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -2438,11 +2438,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.06459270000004835,
+        "elapsed_sec": 0.05696799999986979,
         "trial": 5
       },
       {
-        "config_id": "6981883220140722620",
+        "config_id": "3177037846027507802",
         "configuration": {
           "max_depth": 8,
           "max_features": 1.0,
@@ -2456,11 +2456,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 9,
-        "elapsed_sec": 0.05445529999997234,
+        "elapsed_sec": 0.05550959999982297,
         "trial": 5
       },
       {
-        "config_id": "-6023035355715427106",
+        "config_id": "376771142033082759",
         "configuration": {
           "max_depth": 64,
           "max_features": "sqrt",
@@ -2474,11 +2474,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 9,
-        "elapsed_sec": 0.05732320000004165,
+        "elapsed_sec": 0.055502500000329746,
         "trial": 5
       },
       {
-        "config_id": "-7463083759860020571",
+        "config_id": "-4587044504245470824",
         "configuration": {
           "max_depth": 4,
           "max_features": 1.0,
@@ -2492,11 +2492,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 9,
-        "elapsed_sec": 0.061812900000063564,
+        "elapsed_sec": 0.0537172999993345,
         "trial": 5
       },
       {
-        "config_id": "-6414928537012740766",
+        "config_id": "4828243296205195631",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -2510,11 +2510,11 @@
         },
         "objective": 0.9098731884057971,
         "n_trees": 9,
-        "elapsed_sec": 0.061008700000002136,
+        "elapsed_sec": 0.053291499999431835,
         "trial": 5
       },
       {
-        "config_id": "2969420920056482763",
+        "config_id": "-45994908497562054",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -2528,11 +2528,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.07632039999998597,
+        "elapsed_sec": 0.06930259999990085,
         "trial": 5
       },
       {
-        "config_id": "916630613128174846",
+        "config_id": "6323976864629083523",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -2546,11 +2546,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.06306700000004639,
+        "elapsed_sec": 0.057854800000313844,
         "trial": 5
       },
       {
-        "config_id": "-3781004605657569168",
+        "config_id": "2065734370813830044",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -2564,11 +2564,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.060998499999982414,
+        "elapsed_sec": 0.05589520000012271,
         "trial": 5
       },
       {
-        "config_id": "1561817716567180494",
+        "config_id": "3952891416467025159",
         "configuration": {
           "max_depth": 4,
           "max_features": 1.0,
@@ -2582,11 +2582,11 @@
         },
         "objective": 0.9103260869565217,
         "n_trees": 9,
-        "elapsed_sec": 0.08338639999999486,
+        "elapsed_sec": 0.06402669999988575,
         "trial": 5
       },
       {
-        "config_id": "-9140513351853363963",
+        "config_id": "1124928845494143964",
         "configuration": {
           "max_depth": 32,
           "max_features": 1.0,
@@ -2600,11 +2600,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.07932040000002871,
+        "elapsed_sec": 0.06733230000008916,
         "trial": 5
       },
       {
-        "config_id": "-6892606586717575853",
+        "config_id": "-4988155939630153237",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -2618,11 +2618,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.0780286999998907,
+        "elapsed_sec": 0.06421779999982391,
         "trial": 5
       },
       {
-        "config_id": "-1720490751376034932",
+        "config_id": "-6513101016793977987",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -2636,11 +2636,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.07028909999996813,
+        "elapsed_sec": 0.05265899999994872,
         "trial": 5
       },
       {
-        "config_id": "7648813198159193626",
+        "config_id": "-8374672382515017474",
         "configuration": {
           "max_depth": 16,
           "max_features": 1.0,
@@ -2654,11 +2654,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.07329740000000129,
+        "elapsed_sec": 0.06597529999999097,
         "trial": 5
       },
       {
-        "config_id": "-3484884563084406650",
+        "config_id": "-7185869363097888386",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -2672,11 +2672,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.06873069999994641,
+        "elapsed_sec": 0.05331419999947684,
         "trial": 5
       },
       {
-        "config_id": "-8370564976123856870",
+        "config_id": "1007568438948094990",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.75,
@@ -2690,11 +2690,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.06192339999995511,
+        "elapsed_sec": 0.05311879999953817,
         "trial": 5
       },
       {
-        "config_id": "-6072978272518848735",
+        "config_id": "-4102012295181830155",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -2708,11 +2708,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.07257909999998446,
+        "elapsed_sec": 0.06672099999923375,
         "trial": 5
       },
       {
-        "config_id": "-6144755494929573746",
+        "config_id": "-3727733853685755786",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -2726,11 +2726,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 9,
-        "elapsed_sec": 0.05600389999995059,
+        "elapsed_sec": 0.05210650000026362,
         "trial": 5
       },
       {
-        "config_id": "3197661979498875697",
+        "config_id": "-5090476579896571493",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -2744,11 +2744,11 @@
         },
         "objective": 0.8845108695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.060339200000044,
+        "elapsed_sec": 0.053139200000259734,
         "trial": 5
       },
       {
-        "config_id": "-8641840242840330525",
+        "config_id": "-7518892962869935535",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -2762,11 +2762,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 9,
-        "elapsed_sec": 0.06063649999998688,
+        "elapsed_sec": 0.053080900000168185,
         "trial": 5
       },
       {
-        "config_id": "-6276971159662861373",
+        "config_id": "-3742652399628508749",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -2780,11 +2780,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 9,
-        "elapsed_sec": 0.056262400000036905,
+        "elapsed_sec": 0.054585799999586015,
         "trial": 5
       },
       {
-        "config_id": "3833570628406465388",
+        "config_id": "-3593171062016263991",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -2798,11 +2798,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 9,
-        "elapsed_sec": 0.07135180000000219,
+        "elapsed_sec": 0.05709180000030756,
         "trial": 5
       },
       {
-        "config_id": "-2519146602175643698",
+        "config_id": "-1560790444875361836",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -2816,11 +2816,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.07766760000004069,
+        "elapsed_sec": 0.07159189999947557,
         "trial": 6
       },
       {
-        "config_id": "-7463083759860020571",
+        "config_id": "-4587044504245470824",
         "configuration": {
           "max_depth": 4,
           "max_features": 1.0,
@@ -2834,11 +2834,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 27,
-        "elapsed_sec": 0.08827189999999518,
+        "elapsed_sec": 0.07172830000035901,
         "trial": 6
       },
       {
-        "config_id": "-6144755494929573746",
+        "config_id": "-3727733853685755786",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -2852,11 +2852,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 27,
-        "elapsed_sec": 0.08809579999990547,
+        "elapsed_sec": 0.06974600000012288,
         "trial": 6
       },
       {
-        "config_id": "-1732310720991814397",
+        "config_id": "3695589737581457794",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -2870,11 +2870,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.08850199999994857,
+        "elapsed_sec": 0.06961719999981142,
         "trial": 6
       },
       {
-        "config_id": "-351715528331788892",
+        "config_id": "-5216014055052647699",
         "configuration": {
           "max_depth": null,
           "max_features": 0.75,
@@ -2888,11 +2888,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 27,
-        "elapsed_sec": 0.0828930999999784,
+        "elapsed_sec": 0.07513600000038423,
         "trial": 6
       },
       {
-        "config_id": "-866264992899942442",
+        "config_id": "4262713423352416370",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -2906,11 +2906,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.08628329999999096,
+        "elapsed_sec": 0.07715329999973619,
         "trial": 6
       },
       {
-        "config_id": "-6276971159662861373",
+        "config_id": "-3742652399628508749",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -2924,11 +2924,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.08589150000000245,
+        "elapsed_sec": 0.06897620000017923,
         "trial": 6
       },
       {
-        "config_id": "-8641840242840330525",
+        "config_id": "-7518892962869935535",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -2942,11 +2942,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.08003389999998944,
+        "elapsed_sec": 0.07333939999989525,
         "trial": 6
       },
       {
-        "config_id": "3833570628406465388",
+        "config_id": "-3593171062016263991",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -2960,11 +2960,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.10497859999998127,
+        "elapsed_sec": 0.09594360000028246,
         "trial": 6
       },
       {
-        "config_id": "-3484884563084406650",
+        "config_id": "-7185869363097888386",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -2978,11 +2978,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.07411400000000867,
+        "elapsed_sec": 0.07205950000025041,
         "trial": 6
       },
       {
-        "config_id": "-3484884563084406650",
+        "config_id": "-7185869363097888386",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -2996,11 +2996,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.08439290000001165,
+        "elapsed_sec": 0.07130440000037197,
         "trial": 6
       },
       {
-        "config_id": "-8641840242840330525",
+        "config_id": "-7518892962869935535",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -3014,11 +3014,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.18921300000010888,
+        "elapsed_sec": 0.18370259999937844,
         "trial": 7
       },
       {
-        "config_id": "-866264992899942442",
+        "config_id": "4262713423352416370",
         "configuration": {
           "max_depth": 4,
           "max_features": "sqrt",
@@ -3032,11 +3032,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.18749890000003688,
+        "elapsed_sec": 0.18035909999980504,
         "trial": 7
       },
       {
-        "config_id": "3833570628406465388",
+        "config_id": "-3593171062016263991",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -3050,11 +3050,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.26225620000002436,
+        "elapsed_sec": 0.2472488000003068,
         "trial": 7
       },
       {
-        "config_id": "3833570628406465388",
+        "config_id": "-3593171062016263991",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.5,
@@ -3068,11 +3068,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 243,
-        "elapsed_sec": 0.7335954000000129,
+        "elapsed_sec": 0.7105688999999984,
         "trial": 8
       },
       {
-        "config_id": "5486501087318986249",
+        "config_id": "-6912144006124847555",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -3086,11 +3086,11 @@
         },
         "objective": 0.8890398550724637,
         "n_trees": 27,
-        "elapsed_sec": 0.16023889999996754,
+        "elapsed_sec": 0.13604670000040642,
         "trial": 9
       },
       {
-        "config_id": "4686818052391035988",
+        "config_id": "2390003321260098205",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -3104,11 +3104,11 @@
         },
         "objective": 0.899909420289855,
         "n_trees": 27,
-        "elapsed_sec": 0.12457870000002913,
+        "elapsed_sec": 0.11164259999986825,
         "trial": 9
       },
       {
-        "config_id": "-3821383495263909269",
+        "config_id": "-6696583403841268213",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -3122,11 +3122,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.12099640000008094,
+        "elapsed_sec": 0.1125395999997636,
         "trial": 9
       },
       {
-        "config_id": "1796013735207526895",
+        "config_id": "-3721154667172428184",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -3140,11 +3140,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 27,
-        "elapsed_sec": 0.15505719999998746,
+        "elapsed_sec": 0.14432529999976396,
         "trial": 9
       },
       {
-        "config_id": "-4022184912699995317",
+        "config_id": "3071436799347570941",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.5,
@@ -3158,11 +3158,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.1152958000000126,
+        "elapsed_sec": 0.0952819999993153,
         "trial": 9
       },
       {
-        "config_id": "-7545550451922407653",
+        "config_id": "6834622400375515674",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -3176,11 +3176,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.12603090000004613,
+        "elapsed_sec": 0.0995067999992898,
         "trial": 9
       },
       {
-        "config_id": "2100226936123552858",
+        "config_id": "145157605439901592",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -3194,11 +3194,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.1652863999998999,
+        "elapsed_sec": 0.13417829999980313,
         "trial": 9
       },
       {
-        "config_id": "-2081762073323917412",
+        "config_id": "-2653210868480397711",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -3212,11 +3212,11 @@
         },
         "objective": 0.899909420289855,
         "n_trees": 27,
-        "elapsed_sec": 0.12430959999994684,
+        "elapsed_sec": 0.10930349999944156,
         "trial": 9
       },
       {
-        "config_id": "-2539598587372044559",
+        "config_id": "-430219617595390615",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -3230,11 +3230,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.17296969999995326,
+        "elapsed_sec": 0.13528519999999844,
         "trial": 9
       },
       {
-        "config_id": "2990164843347619907",
+        "config_id": "275747636164699977",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -3248,11 +3248,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.18155820000004042,
+        "elapsed_sec": 0.13705159999972238,
         "trial": 9
       },
       {
-        "config_id": "4134606987003897704",
+        "config_id": "-7725933060983093927",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -3266,11 +3266,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.12020919999997659,
+        "elapsed_sec": 0.09887330000037764,
         "trial": 9
       },
       {
-        "config_id": "-6104984037750233219",
+        "config_id": "7808013971058854610",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -3284,11 +3284,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.11588389999997162,
+        "elapsed_sec": 0.10175699999945209,
         "trial": 9
       },
       {
-        "config_id": "710037113898478070",
+        "config_id": "-5640375752238029125",
         "configuration": {
           "max_depth": 64,
           "max_features": 0.5,
@@ -3302,11 +3302,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 27,
-        "elapsed_sec": 0.12673659999995834,
+        "elapsed_sec": 0.10205499999938183,
         "trial": 9
       },
       {
-        "config_id": "-8616535510463941958",
+        "config_id": "-7350110221416031510",
         "configuration": {
           "max_depth": null,
           "max_features": 0.5,
@@ -3320,11 +3320,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 27,
-        "elapsed_sec": 0.1323419999999942,
+        "elapsed_sec": 0.10516869999992196,
         "trial": 9
       },
       {
-        "config_id": "-2549953231094213533",
+        "config_id": "-274337533330566775",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -3338,11 +3338,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 27,
-        "elapsed_sec": 0.16671949999999924,
+        "elapsed_sec": 0.13247279999995953,
         "trial": 9
       },
       {
-        "config_id": "4134606987003897704",
+        "config_id": "-7725933060983093927",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -3356,11 +3356,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 81,
-        "elapsed_sec": 0.22472039999991011,
+        "elapsed_sec": 0.2031792999996469,
         "trial": 10
       },
       {
-        "config_id": "-2549953231094213533",
+        "config_id": "-274337533330566775",
         "configuration": {
           "max_depth": null,
           "max_features": 1.0,
@@ -3374,11 +3374,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 81,
-        "elapsed_sec": 0.35719699999992827,
+        "elapsed_sec": 0.25922450000052777,
         "trial": 10
       },
       {
-        "config_id": "1796013735207526895",
+        "config_id": "-3721154667172428184",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -3392,11 +3392,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.3326829000000089,
+        "elapsed_sec": 0.2542749999993248,
         "trial": 10
       },
       {
-        "config_id": "-3821383495263909269",
+        "config_id": "-6696583403841268213",
         "configuration": {
           "max_depth": null,
           "max_features": "sqrt",
@@ -3410,11 +3410,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.2406993000000739,
+        "elapsed_sec": 0.19577619999927265,
         "trial": 10
       },
       {
-        "config_id": "-2539598587372044559",
+        "config_id": "-430219617595390615",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -3428,11 +3428,11 @@
         },
         "objective": 0.9678442028985508,
         "n_trees": 81,
-        "elapsed_sec": 0.3013971999999967,
+        "elapsed_sec": 0.2584775000004811,
         "trial": 10
       },
       {
-        "config_id": "-2539598587372044559",
+        "config_id": "-430219617595390615",
         "configuration": {
           "max_depth": 8,
           "max_features": "sqrt",
@@ -3446,11 +3446,11 @@
         },
         "objective": 0.957427536231884,
         "n_trees": 243,
-        "elapsed_sec": 0.8443986000000905,
+        "elapsed_sec": 0.7218340999997963,
         "trial": 11
       },
       {
-        "config_id": "-3408958113083916829",
+        "config_id": "-3390158603485273366",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -3464,11 +3464,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 81,
-        "elapsed_sec": 0.4403016999999636,
+        "elapsed_sec": 0.3805707000001348,
         "trial": 12
       },
       {
-        "config_id": "1707698826319052655",
+        "config_id": "-1654286942632350231",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -3482,11 +3482,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.374692800000048,
+        "elapsed_sec": 0.2725211999995736,
         "trial": 12
       },
       {
-        "config_id": "4992917762576836478",
+        "config_id": "-3619263241462645429",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.5,
@@ -3500,11 +3500,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 81,
-        "elapsed_sec": 0.3631675000000314,
+        "elapsed_sec": 0.2708001000000877,
         "trial": 12
       },
       {
-        "config_id": "-3484884563084406650",
+        "config_id": "-7185869363097888386",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.5,
@@ -3518,11 +3518,11 @@
         },
         "objective": 0.9157608695652174,
         "n_trees": 81,
-        "elapsed_sec": 0.30110660000002554,
+        "elapsed_sec": 0.24707910000051925,
         "trial": 12
       },
       {
-        "config_id": "6644240846815926318",
+        "config_id": "7024693901443979703",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -3536,11 +3536,11 @@
         },
         "objective": 0.899909420289855,
         "n_trees": 81,
-        "elapsed_sec": 0.32893830000000435,
+        "elapsed_sec": 0.27894670000023325,
         "trial": 12
       },
       {
-        "config_id": "2152529596646309630",
+        "config_id": "2024506620270529952",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -3554,11 +3554,11 @@
         },
         "objective": 0.931159420289855,
         "n_trees": 81,
-        "elapsed_sec": 0.316521400000056,
+        "elapsed_sec": 0.26049520000015036,
         "trial": 12
       },
       {
-        "config_id": "-8755984547355824336",
+        "config_id": "4627540212348716130",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -3572,11 +3572,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 81,
-        "elapsed_sec": 0.3221767999999656,
+        "elapsed_sec": 0.26865730000008625,
         "trial": 12
       },
       {
-        "config_id": "6097569376643764638",
+        "config_id": "8596152646158179619",
         "configuration": {
           "max_depth": 4,
           "max_features": 0.75,
@@ -3590,11 +3590,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 81,
-        "elapsed_sec": 0.28902740000000904,
+        "elapsed_sec": 0.2691350000004604,
         "trial": 12
       },
       {
-        "config_id": "2152529596646309630",
+        "config_id": "2024506620270529952",
         "configuration": {
           "max_depth": 32,
           "max_features": 0.75,
@@ -3608,11 +3608,11 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 243,
-        "elapsed_sec": 0.5804993000000422,
+        "elapsed_sec": 0.5994379000003391,
         "trial": 13
       },
       {
-        "config_id": "-8755984547355824336",
+        "config_id": "4627540212348716130",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -3626,11 +3626,11 @@
         },
         "objective": 0.9470108695652174,
         "n_trees": 243,
-        "elapsed_sec": 0.6090426999999181,
+        "elapsed_sec": 0.5960599000000002,
         "trial": 13
       },
       {
-        "config_id": "-1769864266294435051",
+        "config_id": "-798956860645363799",
         "configuration": {
           "max_depth": 32,
           "max_features": "sqrt",
@@ -3644,11 +3644,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 243,
-        "elapsed_sec": 0.7611356999999543,
+        "elapsed_sec": 0.7533361000005243,
         "trial": 14
       },
       {
-        "config_id": "-1209740222584485714",
+        "config_id": "-2186218694293417041",
         "configuration": {
           "max_depth": 8,
           "max_features": 0.75,
@@ -3662,11 +3662,11 @@
         },
         "objective": 0.926177536231884,
         "n_trees": 243,
-        "elapsed_sec": 0.8684799000000112,
+        "elapsed_sec": 0.7593869000002087,
         "trial": 14
       },
       {
-        "config_id": "5138426519513074686",
+        "config_id": "153725773212343404",
         "configuration": {
           "max_depth": 8,
           "max_features": 1.0,
@@ -3680,11 +3680,11 @@
         },
         "objective": 0.9053442028985508,
         "n_trees": 243,
-        "elapsed_sec": 0.8698905999999624,
+        "elapsed_sec": 0.7285551999993913,
         "trial": 14
       },
       {
-        "config_id": "-3189306758394690235",
+        "config_id": "2127803899900761633",
         "configuration": {
           "max_depth": 16,
           "max_features": "sqrt",
@@ -3698,11 +3698,11 @@
         },
         "objective": 0.9365942028985508,
         "n_trees": 243,
-        "elapsed_sec": 0.8971992000000455,
+        "elapsed_sec": 0.716283800000383,
         "trial": 14
       },
       {
-        "config_id": "5353374303551149589",
+        "config_id": "-2150470920758499812",
         "configuration": {
           "max_depth": 16,
           "max_features": 0.75,
@@ -3716,17 +3716,17 @@
         },
         "objective": 0.9207427536231885,
         "n_trees": 243,
-        "elapsed_sec": 0.8619826999999987,
+        "elapsed_sec": 0.7506466000004366,
         "trial": 14
       }
     ],
-    "search_seconds": 24.928089499999942,
+    "search_seconds": 22.08773370000017,
     "final_result": {
       "metrics": {
         "balanced_accuracy": 0.9732789855072463,
         "f1_score": 0.9686028257456829
       },
-      "elapsed_sec": 1.414019099999905
+      "elapsed_sec": 1.2818148999995174
     }
   }
 ]
