@@ -1,9 +1,9 @@
 @echo off
 for %%D in (
-    "Phishing_Legitimate_full"
     "breast-w"
     "credit-g"
     "phoneme"
+    "Phishing_Legitimate_full"
     "gas-drift"
 ) do (
 for %%S in (11 22 33 44 55) do (
