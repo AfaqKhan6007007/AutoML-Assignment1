@@ -18,5 +18,5 @@ do
     done
 done
 
-# run this onece: chmod +x run_experiments.sh
-# then run: ./run_experiments.sh
+# run this onece: chmod +x experiments.sh
+# then run: ./experiments.sh
