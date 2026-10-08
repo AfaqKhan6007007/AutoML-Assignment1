@@ -5,3 +5,4 @@ openml>=0.15,<1
 matplotlib>=3.8,<4
 optuna
 tabpfn-client
+tabpfn
