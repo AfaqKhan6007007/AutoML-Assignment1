@@ -132,8 +132,9 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
                 config, history = optimise_hyperband(
                     evaluator, min_trees, max_trees, args.seed
                 )
-                for dic in history:
-                    dic.pop("model", None)
+
+            for dic in history:
+                dic.pop("model", None)
             search_seconds = perf_counter() - start
             final_result = final_test_evaluation(
                 config, max_trees, args.seed, *final_arrays
@@ -169,6 +170,9 @@ def main() -> None:
     for name in names:
         print(f"Running {name} with seed {args.seed}", flush=True)
         results = run_dataset(name, args)
+        for result in results:
+            for dic in result.get("history", []):
+                dic.pop("model", None)
         # TODO: save results in a format of your choice, along with the settings
         # needed to reproduce the run. Retain enough information for your plots
         # and tables. This example only prints final results; it saves no files.
