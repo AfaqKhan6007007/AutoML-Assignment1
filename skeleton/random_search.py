@@ -27,7 +27,7 @@ def optimise_random_search(
     Return the selected configuration and results needed for your analysis.
     """
     rng = np.random.default_rng(seed=seed)
-    best_current_score = None
+    best_current_score = float('-inf')
     best_current_config = None
     history = [] 
     for i in range(n_trials):
