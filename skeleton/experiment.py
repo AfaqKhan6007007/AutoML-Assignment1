@@ -64,8 +64,8 @@ PROFILES: dict[str, dict[str, Any]] = {
     "exp": {
         "max_samples": None,
         "min_trees": 3,
-        "max_trees": 243,
-        "n_trials": 20, # equivalent to number of trees trained with hyperband 
+        "max_trees": 81,
+        "n_trials": 11, # equivalent to number of trees trained with hyperband 
     },
 }
 
@@ -101,7 +101,11 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
     temporal = False
     if name == TIMESERIES_DS:
         temporal = True
-    splits = load_and_split(name, args.cache_dir, profile["max_samples"], args.split_seed, temporal=temporal)
+    if name == "covertype":
+        max_samples = 100000
+    else:
+        profile["max_samples"]
+    splits = load_and_split(name, args.cache_dir, max_samples, args.split_seed, temporal=temporal)
     results = []
     forest_methods = {"default", "random", "smbo", "hyperband"}.intersection(args.methods)
     if forest_methods:

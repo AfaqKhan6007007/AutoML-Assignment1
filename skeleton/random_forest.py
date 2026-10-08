@@ -20,7 +20,7 @@ Evaluator = Callable[[Config, int, int], dict[str, Any]]
 
 # Example parallelism per forest; -1 uses all available CPU cores.
 # Choose this for your hardware and report it when comparing runtimes.
-N_JOBS = 4
+N_JOBS = -1
 
 # Optional starting point. Choose and justify a shared space and sampling rules,
 # or use your optimiser package's search-space tools. Keep tree count separate.
@@ -33,11 +33,11 @@ N_JOBS = 4
 # }
 
 SEARCH_SPACE = {
-    "max_depth": (1, 2, 4, 8, 16),
-    "max_features": ("sqrt", 0.5, 0.75, 1.0),
-    "min_samples_leaf": (1, 2, 4, 8, 16),
-    "min_samples_split": (2, 4, 8, 16, 32),
-    "class_weight": (None, "balanced", "balanced_subsample"),
+    "max_depth": (4, 6, 8, 12, 14),
+    "max_features": ("sqrt", 0.25, 0.5),
+    "min_samples_leaf": (4, 8, 16, 32, 64),
+    "min_samples_split": (8, 16, 32, 64, 128),
+    "class_weight": (None, "balanced"),
 }
 
 # Chosen metric
