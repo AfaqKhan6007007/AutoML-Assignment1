@@ -24,7 +24,7 @@ DATASETS = {
     "credit-g": 31,
     "phoneme": 1489,
     "electricity": 151,
-    "covertype": 1596,
+    "vehicle_sensIT": 357,
 }
 
 
@@ -43,11 +43,11 @@ class DataSplits:
 def downcast_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """Downcast numeric columns to smallest valid types while safely ignoring strings/objects.
     Useful especially for larger datasets such as covertype."""
-    numeric_cols = df.select_dtypes(include=[np.number]).columns
 
-    for col in numeric_cols:
-        dtype_kind = "float" if np.issubdtype(df[col].dtype, np.floating) else "integer"
-        df[col] = pd.to_numeric(df[col], downcast=dtype_kind)
+    for col in df.columns:
+        if pd.api.types.is_numeric_dtype(df[col]):
+            dtype_kind = "float" if pd.api.types.is_float_dtype(df[col]) else "integer"
+            df[col] = pd.to_numeric(df[col], downcast=dtype_kind)
 
     return df
 
@@ -99,7 +99,7 @@ def load_and_split(
         )
     else:
         X_train_valid, X_test, y_train_valid, y_test = train_test_split(
-            X, y, test_size=0.20, random_state=seed, stratify=y, shuffle=False
+            X, y, test_size=0.20, shuffle=False
         )
         X_train, X_valid, y_train, y_valid = train_test_split(
             X_train_valid,
