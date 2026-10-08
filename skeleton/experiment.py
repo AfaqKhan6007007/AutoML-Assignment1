@@ -65,7 +65,7 @@ PROFILES: dict[str, dict[str, Any]] = {
         "max_samples": None,
         "min_trees": 3,
         "max_trees": 243,
-        "n_trials": 16, # equivalent to number of trees trained with hyperband 
+        "n_trials": 20, # equivalent to number of trees trained with hyperband 
     },
 }
 
