@@ -39,6 +39,7 @@ def optimise_hyperband(
 
     eta = reduction_factor
     assert eta > 1, "Reduction factor must be greater than 1"
+    assert max_trees/min_trees % eta == 0, f"Make sure max_trees and min-trees are powers of {eta}"
     s_max = int(np.floor(np.log(max_trees/min_trees) / np.log(eta)))
     B = (s_max+1) * max_trees
 
@@ -55,10 +56,12 @@ def optimise_hyperband(
         r = int(min_trees*(eta**(s_max-s)))
         configs = [(sample_configuration(rng), None) for _ in range(n)]
         total_configurations_trained+=n
+        previous_r = 0
         for i in range(s+1):
             r_i = int(r*(eta**i))
             n_i = len(configs)
-            total_trees_trained += n_i * (r_i - (r_i//eta))
+            total_trees_trained += n_i * (r_i - previous_r)
+            previous_r = r_i
             L = [evaluator(config, r_i, seed, model) for config, model in configs]
             history.extend([
                 {**{k: v for k, v in result.items() if k != "model"},
@@ -68,7 +71,7 @@ def optimise_hyperband(
             scores = [l["objective"] for l in L]
             max_idx = np.argmax(scores)
             best_current_score = scores[max_idx]
-            if best_current_score > best_score:
+            if i ==s and best_current_score > best_score:
                 best_score = best_current_score
                 best_config = configs[max_idx][0]
 

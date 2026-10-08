@@ -38,7 +38,7 @@ def optimise_smbo(
         history.append(result)
         return result["objective"]
                      
-    study = optuna.create_study(direction="maximize", sampler=optuna.samplers.TPESampler(seed=seed))
+    study = optuna.create_study(direction="maximize", sampler=optuna.samplers.TPESampler(n_startup_trials=5, seed=seed))
     study.optimize(objective, n_trials=n_trials)
 
     return Config(**study.best_params), history
