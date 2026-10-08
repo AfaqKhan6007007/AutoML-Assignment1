@@ -11,12 +11,12 @@ do
     do
         python skeleton/experiment.py \
             --seed "$S" \
-            --methods default random smbo hyperband foundation \
+            --methods default random smbo hyperband \
             --profile "exp" \
             --context 1000 \
             --dataset "$D"
     done
 done
 
-# run this onece: chmod +x experiments.sh
-# then run: ./experiments.sh
+# run this onece: chmod +x experiment.sh
+# then run: ./experiment.sh

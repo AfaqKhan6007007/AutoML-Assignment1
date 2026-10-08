@@ -15,7 +15,8 @@ from sklearn.model_selection import train_test_split
 
 from random_forest import predictive_metrics
 
-from tabpfn_client import TabPFNClassifier
+# from tabpfn_client import TabPFNClassifier
+from tabpfn import TabPFNClassifier
 
 from dotenv import load_dotenv
 load_dotenv()
