@@ -15,7 +15,7 @@ N_TRIALS = 14
 
 # ensure correct path for saving 
 script_dir = Path(__file__).resolve().parent
-DIR = script_dir / "../data/experiment_08oct/"
+DIR = script_dir / "../data/"
 DIR.mkdir(parents=True, exist_ok=True)
 
 def load(seed, ds):
@@ -53,35 +53,59 @@ def on_grid(x, y, grid):
     i = np.searchsorted(x, grid, side="right") - 1
     return np.where(i >= 0, y[np.clip(i, 0, None)], np.nan)
 
-fig, axes = plt.subplots(1, len(DATASETS), figsize=(5 * len(DATASETS), 4), squeeze=False)
-
-for ax, ds in zip(axes[0], DATASETS):
+for ds in DATASETS:
     runs = {m: [] for m in METHODS}
     finals = {m: [] for m in METHODS}
+
     for s in SEEDS:
         for r in load(s, ds):
             if r.get("history"):
                 runs[r["method"]].append(curve(r))
-            fr = r.get("final_result", r.get("result"))
-            finals[r["method"]].append(fr["metrics"]["balanced_accuracy"])
 
-    grid = np.linspace(0, max(x[-1] for m in METHODS for x, _ in runs[m]), 300)
+            fr = r.get("final_result", r.get("result"))
+            finals[r["method"]].append(
+                fr["metrics"]["balanced_accuracy"]
+            )
+
+    # One plot per dataset
+    fig, ax = plt.subplots(figsize=(5, 4))
+
+    grid = np.linspace(
+        0,
+        max(x[-1] for m in METHODS for x, _ in runs[m]),
+        300
+    )
 
     for m in METHODS:
         if not runs[m]:
             continue
-        if m == "default":
-            Y = np.array([[y[-1]] * len(grid) for _, y in runs[m]])
-        else:
-            Y = np.array([on_grid(x, y, grid) for x, y in runs[m]])
-        mu, sd = np.nanmean(Y, 0), np.nanstd(Y, 0)
-        ax.plot(grid, mu, label=m, linestyle="--" if m == "default" else "-")
-        ax.fill_between(grid, mu - sd, mu + sd, alpha=0.2)
 
-    print(ds)
-    for m in METHODS:
-        if finals[m]:
-            print(f"  {m:10s} test bal. acc: {np.mean(finals[m]):.4f} ± {np.std(finals[m]):.4f}")
+        if m == "default":
+            Y = np.array([
+                [y[-1]] * len(grid)
+                for _, y in runs[m]
+            ])
+        else:
+            Y = np.array([
+                on_grid(x, y, grid)
+                for x, y in runs[m]
+            ])
+
+        mu, sd = np.nanmean(Y, 0), np.nanstd(Y, 0)
+
+        ax.plot(
+            grid,
+            mu,
+            label=m,
+            linestyle="--" if m == "default" else "-"
+        )
+
+        ax.fill_between(
+            grid,
+            mu - sd,
+            mu + sd,
+            alpha=0.2
+        )
 
     ax.set_title(ds)
     ax.set_xlabel("n_trees (cumulative)")
@@ -89,8 +113,14 @@ for ax, ds in zip(axes[0], DATASETS):
     ax.legend()
     ax.grid(alpha=0.3)
 
-plt.tight_layout()
-plt.savefig("balanced_accuracy_curves_1.png", dpi=200)
+    plt.tight_layout()
+
+    # Save one plot per dataset
+    plot_path = DIR / f"balanced_accuracy_curve_{ds}.png"
+    plt.savefig(plot_path, dpi=200)
+    plt.close(fig)
+
+    print(f"Saved plot to: {plot_path}")
 
 
 csv_path = DIR / "final_balanced_accuracy.csv"
