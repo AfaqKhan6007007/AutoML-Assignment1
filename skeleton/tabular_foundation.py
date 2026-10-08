@@ -44,7 +44,13 @@ def run_foundation_model(splits: DataSplits, seed: int, context_size: int=1000) 
     stratify=y_train_valid,
     random_state=seed,  
     )
-    clf = TabPFNClassifier(random_state=seed, model_path='tabpfn-v2.5-classifier-v2.5_default.ckpt')
+    clf = TabPFNClassifier(
+        random_state=seed, 
+        model_path='tabpfn-v2.5-classifier-v2.5_default.ckpt',
+        device='cpu',
+        n_estimators=2,
+        n_preprocessing_jobs=4,
+        )
     
     clf.fit(X_context, y_context)
     return {

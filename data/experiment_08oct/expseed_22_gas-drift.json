@@ -1,4 +1,15 @@
-[
+[  {
+    "dataset": "gas-drift",
+    "method": "foundation",
+    "seed": 22,
+    "result": {
+      "metrics": {
+        "balanced_accuracy": 0.9575148155220593,
+        "f1_score": 0.9593207287669374
+      },
+      "elapsed_sec": 233.55906920000416
+    }
+  },
   {
     "dataset": "gas-drift",
     "method": "default",

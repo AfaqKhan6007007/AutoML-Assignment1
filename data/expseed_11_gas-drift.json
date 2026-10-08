@@ -5,10 +5,10 @@
     "seed": 11,
     "result": {
       "metrics": {
-        "balanced_accuracy": 0.9908806133227149,
-        "f1_score": 0.9922203490731462
+        "balanced_accuracy": 0.945484893434895,
+        "f1_score": 0.9406555964848273
       },
-      "elapsed_sec": 11.267277599996305
+      "elapsed_sec": 251.08036329999595
     }
   }
 ]
