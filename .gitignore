@@ -1,3 +1,5 @@
 data_cache/
 skeleton/__pycache__/
 .env
+data/old_config/
+data/

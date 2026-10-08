@@ -35,7 +35,7 @@ output_dir = script_dir / "../data"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # Update this if the provided largest dataset is replaced.
-FOUNDATION_DATASET = "covertype"
+FOUNDATION_DATASET = "gas-drift"
 
 # Time series dataset
 TIMESERIES_DS = "electricity"
@@ -65,7 +65,7 @@ PROFILES: dict[str, dict[str, Any]] = {
         "max_samples": None,
         "min_trees": 3,
         "max_trees": 81,
-        "n_trials": 11, # equivalent to number of trees trained with hyperband 
+        "n_trials": 14, # equivalent to number of trees trained with hyperband 
     },
 }
 

@@ -23,8 +23,8 @@ DATASETS = {
     "breast-w": 15,
     "credit-g": 31,
     "phoneme": 1489,
-    "electricity": 151,
-    "vehicle_sensIT": 357,
+    "Phishing_Legitimate_full": 46868,
+    "gas-drift": 1476,
 }
 
 
@@ -68,7 +68,7 @@ def load_dataset(
     if y.nunique() < 2:
         raise ValueError("The target must contain at least two classes")
     
-    return downcast_dataframe(X.reset_index(drop=True)), LabelEncoder().fit_transform(y)
+    return X.reset_index(drop=True), LabelEncoder().fit_transform(y)
 
 
 def load_and_split(
