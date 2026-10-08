@@ -40,6 +40,17 @@ class DataSplits:
     y_test: np.ndarray
 
 
+def downcast_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """Downcast numeric columns to smallest valid types while safely ignoring strings/objects.
+    Useful especially for larger datasets such as covertype."""
+    numeric_cols = df.select_dtypes(include=[np.number]).columns
+
+    for col in numeric_cols:
+        dtype_kind = "float" if np.issubdtype(df[col].dtype, np.floating) else "integer"
+        df[col] = pd.to_numeric(df[col], downcast=dtype_kind)
+
+    return df
+
 def load_dataset(
     name: str, cache_dir: str | Path = "data_cache"
 ) -> tuple[pd.DataFrame, np.ndarray]:
@@ -56,7 +67,8 @@ def load_dataset(
         raise ValueError("The target contains missing labels; choose and justify how to handle them")
     if y.nunique() < 2:
         raise ValueError("The target must contain at least two classes")
-    return X.reset_index(drop=True), LabelEncoder().fit_transform(y)
+    
+    return downcast_dataframe(X.reset_index(drop=True)), LabelEncoder().fit_transform(y)
 
 
 def load_and_split(
