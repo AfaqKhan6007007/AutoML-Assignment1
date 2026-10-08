@@ -132,6 +132,8 @@ def run_dataset(name: str, args: argparse.Namespace) -> list[dict[str, Any]]:
                 config, history = optimise_hyperband(
                     evaluator, min_trees, max_trees, args.seed
                 )
+                for dic in history:
+                    dic.pop("model", None)
             search_seconds = perf_counter() - start
             final_result = final_test_evaluation(
                 config, max_trees, args.seed, *final_arrays
