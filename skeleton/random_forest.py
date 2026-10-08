@@ -33,7 +33,7 @@ N_JOBS = 4
 # }
 
 SEARCH_SPACE = {
-    "max_depth": (None, 4, 8, 16, 32, 64),
+    "max_depth": (1, 2, 4, 8, 16),
     "max_features": ("sqrt", 0.5, 0.75, 1.0),
     "min_samples_leaf": (1, 2, 4, 8, 16),
     "min_samples_split": (2, 4, 8, 16, 32),
