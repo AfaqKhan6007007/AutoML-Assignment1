@@ -11,7 +11,7 @@ do
     do
         uv run python skeleton/experiment.py \
             --seed "$S" \
-            --methods default random smbo hyperband \
+            --methods default random smbo hyperband foundation \
             --profile "exp" \
             --dataset "$D"
     done
