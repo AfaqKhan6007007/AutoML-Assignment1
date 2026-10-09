@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from typing import Any
+import csv
+
 
 warnings.filterwarnings("ignore")
 
@@ -18,6 +20,7 @@ script_dir = Path(__file__).resolve().parent
 DIR = script_dir / "../data/"
 DIR.mkdir(parents=True, exist_ok=True)
 
+# helpers
 def load(seed, ds):
     with open(f"{DIR}/expseed_{seed}_{ds}.json") as f:
         return json.load(f)
@@ -53,6 +56,8 @@ def on_grid(x, y, grid):
     i = np.searchsorted(x, grid, side="right") - 1
     return np.where(i >= 0, y[np.clip(i, 0, None)], np.nan)
 
+
+# get plots
 for ds in DATASETS:
     runs = {m: [] for m in METHODS}
     finals = {m: [] for m in METHODS}
@@ -67,7 +72,6 @@ for ds in DATASETS:
                 fr["metrics"]["balanced_accuracy"]
             )
 
-    # One plot per dataset
     fig, ax = plt.subplots(figsize=(5, 4))
 
     grid = np.linspace(
@@ -115,7 +119,6 @@ for ds in DATASETS:
 
     plt.tight_layout()
 
-    # Save one plot per dataset
     plot_path = DIR / f"balanced_accuracy_curve_{ds}.png"
     plt.savefig(plot_path, dpi=200)
     plt.close(fig)
@@ -123,9 +126,9 @@ for ds in DATASETS:
     print(f"Saved plot to: {plot_path}")
 
 
+# get test performance
 csv_path = DIR / "final_balanced_accuracy.csv"
 
-import csv
 
 with open(csv_path, "w", newline="") as f:
     writer = csv.writer(f)
@@ -164,3 +167,40 @@ with open(csv_path, "w", newline="") as f:
 
 print(f"Saved anytime curve to: {DIR / 'balanced_accuracy_curves_1.png'}")
 print(f"Saved final results to: {csv_path}")
+
+
+# Get running time from jsons
+time_csv_path = DIR / "wall_clock_times.csv"
+
+with open(time_csv_path, "w", newline="") as f:
+    writer = csv.writer(f)
+
+    writer.writerow([
+        "dataset",
+        "method",
+        "mean_wall_clock_seconds",
+        "std_wall_clock_seconds",
+    ])
+
+    for ds in DATASETS:
+        times = {m: [] for m in METHODS}
+
+        for s in SEEDS:
+            for r in load(s, ds):
+                method = r["method"]
+
+                if method == "foundation":
+                    times[method].append(r["result"]["elapsed_sec"])
+                else:
+                    times[method].append(r["search_seconds"])
+
+        for m in METHODS:
+            if times[m]:
+                writer.writerow([
+                    ds,
+                    m,
+                    np.mean(times[m]),
+                    np.std(times[m]),
+                ])
+
+print(f"Saved wall-clock times to: {time_csv_path}")

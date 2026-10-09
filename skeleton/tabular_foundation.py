@@ -18,7 +18,7 @@ from random_forest import predictive_metrics
 from dotenv import load_dotenv
 load_dotenv()
 
-# from tabpfn import TabPFNClassifier
+from tabpfn import TabPFNClassifier
 
 
 
@@ -34,7 +34,7 @@ def run_foundation_model(splits: DataSplits, seed: int, context_size: int=1000) 
     
     Capped at 50k test rows per call
     """
-    return
+    # return
     # TODO: adjust so that single predict calls do not exceed 50k rows
     start = perf_counter()
     X_fit, y_train_valid, X_test, y_test = prepare_final_data(splits)
